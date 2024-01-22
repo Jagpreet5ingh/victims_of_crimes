@@ -1,1 +1,1001 @@
-
+"REPORT_YEAR","SUBTYPE","SEX","AGE_GROUP","AGE_COHORT","COUNT_"
+2016,"robbery","M","Child","<12",210
+2016,"other","F","Adult","25-34",45
+2015,"sexual assault","F","Adult","65+",1097
+2019,"sexual assault","F","Child","<12",45
+2018,"sexual assault","F","Adult","18-24",224
+2017,"assault","M","Adult","65+",262
+2019,"sexual assault","F","Unknown","Unknown",273
+2022,"sexual assault","U","Adult","65+",115
+2018,"other","M","Child","<12",95
+2016,"assault","M","Adult","35-44",151
+2022,"robbery","M","Adult","25-34",30
+2022,"other","F","Adult","65+",84
+2022,"robbery","M","Child","<12",232
+2016,"sexual assault","U","Youth","12-17",195
+2021,"sexual assault","F","Adult","35-44",298
+2020,"assault","M","Adult","45-54",50
+2022,"robbery","M","Adult","25-34",1749
+2016,"sexual assault","M","Unknown","Unknown",282
+2017,"sexual assault","M","Youth","12-17",197
+2014,"other","F","Unknown","Unknown",1560
+2020,"robbery","M","Adult","65+",191
+2018,"assault","M","Child","<12",835
+2020,"sexual assault","F","Child","<12",246
+2022,"robbery","M","Adult","45-54",70
+2022,"assault","F","Unknown","Unknown",285
+2020,"robbery","M","Youth","12-17",286
+2018,"robbery","F","Adult","25-34",197
+2020,"sexual assault","F","Adult","25-34",14
+2018,"robbery","M","Youth","12-17",186
+2019,"sexual assault","M","Child","<12",627
+2022,"assault","F","Unknown","Unknown",204
+2015,"other","U","Youth","12-17",149
+2018,"assault","M","Adult","45-54",246
+2021,"other","U","Adult","18-24",102
+2015,"sexual assault","U","Adult","25-34",208
+2014,"robbery","F","Child","<12",153
+2022,"other","M","Child","<12",239
+2022,"robbery","M","Adult","45-54",283
+2019,"other","U","Adult","45-54",266
+2018,"assault","F","Youth","12-17",156
+2022,"sexual assault","F","Adult","65+",232
+2017,"assault","U","Adult","25-34",1443
+2019,"assault","F","Unknown","Unknown",7
+2021,"other","M","Adult","35-44",250
+2019,"assault","M","Unknown","Unknown",182
+2019,"robbery","F","Child","<12",63
+2020,"other","M","Adult","25-34",239
+2014,"other","M","Youth","12-17",35
+2019,"other","F","Child","<12",1195
+2015,"sexual assault","F","Child","<12",110
+2014,"sexual assault","M","Youth","12-17",293
+2015,"robbery","F","Youth","12-17",1
+2017,"assault","M","Youth","12-17",299
+2018,"other","F","Adult","35-44",160
+2019,"sexual assault","M","Unknown","Unknown",164
+2016,"sexual assault","M","Adult","45-54",126
+2022,"robbery","M","Youth","12-17",107
+2017,"sexual assault","M","Youth","12-17",63
+2019,"sexual assault","M","Adult","25-34",270
+2022,"assault","F","Unknown","Unknown",67
+2022,"robbery","M","Adult","45-54",242
+2020,"assault","M","Adult","25-34",52
+2016,"sexual assault","M","Child","<12",41
+2021,"other","M","Youth","12-17",64
+2022,"sexual assault","F","Adult","25-34",276
+2016,"robbery","F","Adult","45-54",69
+2020,"other","M","Child","<12",195
+2016,"robbery","M","Adult","25-34",274
+2020,"sexual assault","M","Adult","18-24",70
+2019,"other","M","Child","<12",193
+2018,"assault","M","Youth","12-17",178
+2018,"robbery","F","Adult","35-44",73
+2021,"robbery","F","Adult","25-34",96
+2016,"sexual assault","F","Unknown","Unknown",121
+2015,"robbery","U","Unknown","Unknown",121
+2015,"assault","F","Adult","25-34",2181
+2019,"assault","M","Youth","12-17",1120
+2017,"assault","F","Adult","35-44",2442
+2014,"other","M","Youth","12-17",1250
+2019,"assault","F","Adult","35-44",85
+2016,"assault","M","Child","<12",131
+2021,"sexual assault","U","Adult","25-34",90
+2016,"assault","F","Adult","25-34",70
+2021,"robbery","M","Child","<12",133
+2014,"robbery","M","Adult","18-24",14
+2020,"assault","F","Youth","12-17",112
+2020,"other","F","Child","<12",153
+2020,"sexual assault","F","Child","<12",1125
+2019,"other","M","Child","<12",223
+2020,"assault","M","Youth","12-17",147
+2018,"sexual assault","M","Adult","45-54",223
+2019,"sexual assault","U","Child","<12",211
+2021,"assault","F","Child","<12",153
+2018,"robbery","F","Child","<12",252
+2020,"other","M","Adult","65+",151
+2017,"other","F","Child","<12",281
+2016,"sexual assault","F","Adult","18-24",70
+2022,"robbery","F","Adult","18-24",321
+2020,"assault","M","Child","<12",23
+2019,"robbery","M","Adult","18-24",263
+2022,"other","F","Adult","45-54",9
+2020,"assault","F","Child","<12",1211
+2015,"assault","F","Adult","25-34",33
+2016,"assault","U","Child","<12",84
+2021,"robbery","M","Unknown","Unknown",2172
+2017,"assault","M","Adult","25-34",168
+2020,"assault","U","Adult","45-54",243
+2017,"robbery","M","Child","<12",194
+2014,"sexual assault","F","Unknown","Unknown",36
+2021,"sexual assault","U","Adult","45-54",86
+2017,"sexual assault","M","Adult","65+",595
+2022,"sexual assault","F","Adult","45-54",152
+2021,"sexual assault","M","Youth","12-17",175
+2019,"assault","M","Adult","35-44",461
+2017,"sexual assault","F","Child","<12",221
+2021,"other","U","Adult","18-24",83
+2016,"sexual assault","F","Adult","25-34",1812
+2017,"other","F","Adult","65+",153
+2017,"sexual assault","F","Adult","45-54",290
+2019,"sexual assault","F","Youth","12-17",261
+2014,"sexual assault","M","Adult","35-44",1295
+2017,"other","M","Adult","18-24",106
+2022,"robbery","M","Unknown","Unknown",251
+2020,"sexual assault","F","Adult","65+",736
+2021,"other","U","Youth","12-17",175
+2018,"other","M","Adult","45-54",78
+2015,"sexual assault","M","Child","<12",166
+2019,"sexual assault","F","Youth","12-17",167
+2022,"other","M","Adult","35-44",203
+2021,"other","M","Adult","35-44",1614
+2017,"robbery","U","Adult","18-24",10
+2018,"robbery","F","Child","<12",172
+2020,"sexual assault","F","Unknown","Unknown",125
+2014,"sexual assault","M","Child","<12",71
+2021,"assault","M","Adult","65+",1200
+2021,"other","F","Child","<12",1889
+2022,"sexual assault","M","Youth","12-17",150
+2021,"robbery","F","Adult","65+",1412
+2015,"sexual assault","U","Youth","12-17",2244
+2018,"assault","M","Youth","12-17",107
+2022,"sexual assault","M","Adult","25-34",267
+2020,"robbery","M","Adult","65+",203
+2020,"other","M","Unknown","Unknown",27
+2021,"other","M","Unknown","Unknown",228
+2019,"robbery","F","Adult","35-44",131
+2020,"assault","M","Youth","12-17",1231
+2014,"sexual assault","M","Unknown","Unknown",242
+2022,"robbery","F","Adult","25-34",1358
+2016,"sexual assault","M","Adult","25-34",15
+2018,"robbery","F","Youth","12-17",195
+2019,"robbery","M","Unknown","Unknown",30
+2022,"sexual assault","U","Youth","12-17",283
+2017,"robbery","M","Adult","45-54",16
+2020,"sexual assault","M","Child","<12",658
+2022,"other","F","Child","<12",1595
+2020,"robbery","F","Child","<12",2476
+2017,"other","M","Child","<12",192
+2021,"sexual assault","F","Adult","45-54",45
+2022,"assault","M","Adult","35-44",281
+2022,"sexual assault","F","Child","<12",1017
+2022,"other","M","Adult","25-34",269
+2018,"robbery","F","Adult","45-54",758
+2020,"robbery","F","Youth","12-17",229
+2019,"robbery","M","Child","<12",112
+2014,"other","F","Child","<12",103
+2014,"sexual assault","M","Adult","18-24",119
+2014,"other","F","Adult","65+",159
+2018,"sexual assault","F","Adult","25-34",182
+2020,"robbery","F","Adult","25-34",233
+2018,"robbery","U","Youth","12-17",253
+2022,"robbery","F","Unknown","Unknown",10
+2017,"assault","M","Unknown","Unknown",7
+2019,"assault","F","Adult","45-54",2051
+2015,"robbery","M","Adult","18-24",2078
+2014,"sexual assault","F","Child","<12",89
+2018,"assault","M","Unknown","Unknown",171
+2022,"robbery","M","Child","<12",67
+2017,"robbery","F","Adult","35-44",17
+2016,"other","F","Adult","65+",137
+2022,"assault","M","Adult","45-54",141
+2014,"other","F","Adult","65+",201
+2015,"robbery","M","Adult","25-34",169
+2017,"other","M","Child","<12",80
+2014,"robbery","F","Adult","45-54",225
+2018,"other","U","Youth","12-17",125
+2018,"sexual assault","F","Child","<12",139
+2022,"sexual assault","M","Unknown","Unknown",299
+2021,"other","F","Child","<12",239
+2020,"assault","M","Adult","18-24",274
+2022,"sexual assault","F","Adult","35-44",98
+2018,"assault","M","Adult","25-34",139
+2015,"robbery","F","Adult","35-44",18
+2019,"robbery","F","Child","<12",244
+2020,"assault","F","Adult","18-24",24
+2022,"other","M","Adult","25-34",82
+2014,"other","F","Unknown","Unknown",211
+2018,"sexual assault","F","Youth","12-17",108
+2018,"assault","F","Child","<12",64
+2021,"other","M","Unknown","Unknown",1432
+2018,"other","M","Child","<12",235
+2020,"assault","U","Adult","35-44",234
+2017,"other","F","Unknown","Unknown",1681
+2015,"sexual assault","M","Unknown","Unknown",130
+2014,"robbery","F","Youth","12-17",178
+2014,"other","M","Adult","25-34",138
+2015,"assault","F","Youth","12-17",38
+2014,"sexual assault","F","Child","<12",169
+2015,"assault","F","Adult","35-44",93
+2021,"sexual assault","F","Youth","12-17",185
+2014,"robbery","U","Unknown","Unknown",168
+2016,"robbery","U","Adult","18-24",74
+2015,"sexual assault","F","Adult","25-34",99
+2015,"robbery","F","Adult","45-54",974
+2018,"sexual assault","M","Adult","25-34",229
+2022,"other","M","Youth","12-17",204
+2019,"other","F","Adult","25-34",65
+2019,"robbery","M","Youth","12-17",145
+2016,"assault","F","Unknown","Unknown",15
+2017,"sexual assault","M","Youth","12-17",211
+2016,"assault","F","Adult","18-24",2264
+2020,"robbery","M","Child","<12",1249
+2016,"sexual assault","F","Child","<12",47
+2015,"assault","F","Adult","65+",155
+2020,"sexual assault","M","Adult","18-24",946
+2016,"sexual assault","F","Adult","35-44",168
+2022,"other","U","Child","<12",196
+2020,"sexual assault","F","Youth","12-17",225
+2022,"robbery","M","Child","<12",917
+2017,"robbery","F","Adult","45-54",8
+2015,"sexual assault","M","Adult","18-24",148
+2019,"other","M","Child","<12",47
+2022,"sexual assault","M","Adult","25-34",51
+2020,"robbery","M","Youth","12-17",483
+2018,"other","M","Unknown","Unknown",210
+2014,"sexual assault","U","Adult","18-24",627
+2016,"sexual assault","M","Unknown","Unknown",202
+2015,"robbery","M","Adult","65+",11
+2018,"robbery","F","Adult","25-34",210
+2014,"other","F","Adult","65+",63
+2016,"robbery","F","Unknown","Unknown",83
+2022,"other","M","Unknown","Unknown",104
+2015,"robbery","F","Child","<12",247
+2019,"assault","M","Adult","45-54",184
+2016,"assault","F","Adult","35-44",203
+2016,"assault","F","Adult","45-54",299
+2022,"sexual assault","M","Child","<12",245
+2015,"sexual assault","F","Child","<12",33
+2014,"sexual assault","F","Youth","12-17",247
+2019,"robbery","M","Child","<12",198
+2021,"sexual assault","M","Child","<12",17
+2017,"assault","M","Child","<12",234
+2019,"other","U","Youth","12-17",175
+2017,"robbery","F","Adult","45-54",177
+2017,"assault","U","Child","<12",205
+2022,"other","M","Child","<12",26
+2021,"assault","F","Adult","45-54",1737
+2020,"other","F","Adult","65+",66
+2014,"robbery","F","Youth","12-17",102
+2015,"other","M","Youth","12-17",1619
+2021,"assault","F","Unknown","Unknown",206
+2016,"other","M","Adult","65+",960
+2020,"other","F","Child","<12",267
+2014,"other","F","Child","<12",119
+2015,"robbery","M","Child","<12",731
+2016,"robbery","M","Youth","12-17",81
+2016,"other","F","Youth","12-17",169
+2019,"assault","F","Child","<12",97
+2018,"sexual assault","F","Youth","12-17",1923
+2017,"robbery","F","Unknown","Unknown",51
+2015,"robbery","M","Adult","25-34",215
+2014,"robbery","F","Youth","12-17",198
+2014,"assault","M","Adult","35-44",627
+2018,"sexual assault","M","Adult","18-24",522
+2015,"sexual assault","M","Child","<12",225
+2015,"sexual assault","M","Adult","45-54",1347
+2016,"sexual assault","F","Youth","12-17",130
+2018,"robbery","U","Adult","18-24",461
+2019,"robbery","F","Adult","25-34",215
+2016,"assault","F","Youth","12-17",192
+2016,"robbery","M","Child","<12",278
+2014,"robbery","F","Unknown","Unknown",19
+2021,"other","M","Adult","25-34",234
+2014,"robbery","M","Adult","18-24",170
+2017,"robbery","U","Youth","12-17",224
+2021,"sexual assault","U","Adult","25-34",292
+2021,"other","F","Adult","45-54",11
+2020,"other","M","Adult","25-34",172
+2015,"assault","F","Adult","18-24",707
+2014,"sexual assault","M","Child","<12",62
+2017,"robbery","M","Child","<12",166
+2022,"other","F","Child","<12",1765
+2018,"robbery","U","Adult","35-44",1379
+2021,"sexual assault","M","Adult","35-44",1125
+2015,"sexual assault","F","Youth","12-17",254
+2018,"other","M","Youth","12-17",233
+2015,"sexual assault","M","Youth","12-17",57
+2019,"sexual assault","F","Youth","12-17",33
+2022,"robbery","F","Adult","45-54",105
+2020,"robbery","M","Child","<12",206
+2019,"robbery","M","Unknown","Unknown",133
+2016,"other","M","Child","<12",34
+2021,"other","M","Child","<12",30
+2020,"robbery","M","Adult","18-24",321
+2017,"other","M","Youth","12-17",172
+2021,"assault","M","Youth","12-17",284
+2016,"sexual assault","F","Adult","35-44",177
+2021,"sexual assault","M","Child","<12",15
+2019,"other","F","Child","<12",181
+2017,"robbery","M","Adult","18-24",184
+2020,"other","F","Unknown","Unknown",198
+2021,"robbery","U","Adult","35-44",391
+2017,"sexual assault","F","Child","<12",904
+2022,"assault","M","Child","<12",289
+2019,"sexual assault","F","Child","<12",207
+2016,"robbery","U","Adult","25-34",150
+2017,"other","M","Adult","25-34",249
+2022,"other","M","Youth","12-17",1983
+2022,"robbery","F","Adult","45-54",250
+2017,"assault","M","Youth","12-17",137
+2017,"sexual assault","M","Youth","12-17",242
+2019,"sexual assault","F","Adult","65+",259
+2018,"other","F","Unknown","Unknown",11
+2014,"robbery","M","Adult","45-54",177
+2021,"sexual assault","F","Youth","12-17",285
+2020,"robbery","M","Adult","25-34",168
+2018,"robbery","U","Adult","65+",1295
+2019,"other","F","Adult","45-54",1838
+2016,"robbery","M","Unknown","Unknown",54
+2021,"robbery","F","Child","<12",34
+2018,"robbery","M","Adult","18-24",29
+2020,"other","M","Unknown","Unknown",1768
+2017,"assault","F","Child","<12",935
+2022,"robbery","M","Youth","12-17",619
+2016,"assault","F","Child","<12",83
+2020,"assault","F","Youth","12-17",19
+2015,"assault","F","Adult","25-34",69
+2022,"robbery","M","Youth","12-17",884
+2019,"sexual assault","M","Youth","12-17",41
+2017,"robbery","F","Child","<12",1107
+2019,"other","U","Adult","18-24",89
+2015,"other","F","Youth","12-17",5
+2015,"other","U","Youth","12-17",134
+2021,"assault","M","Youth","12-17",185
+2021,"sexual assault","M","Child","<12",128
+2018,"other","F","Child","<12",1220
+2022,"other","F","Child","<12",61
+2020,"other","M","Adult","35-44",125
+2016,"other","U","Adult","25-34",83
+2020,"robbery","M","Unknown","Unknown",1247
+2021,"other","M","Unknown","Unknown",289
+2018,"assault","M","Youth","12-17",221
+2014,"sexual assault","F","Child","<12",273
+2020,"other","F","Youth","12-17",151
+2019,"robbery","U","Adult","65+",230
+2021,"assault","F","Adult","65+",63
+2017,"sexual assault","M","Youth","12-17",2
+2019,"other","M","Adult","25-34",65
+2014,"sexual assault","F","Unknown","Unknown",74
+2016,"assault","M","Youth","12-17",4
+2017,"other","F","Adult","18-24",60
+2014,"robbery","F","Adult","45-54",30
+2018,"sexual assault","F","Adult","65+",167
+2017,"assault","M","Adult","25-34",161
+2015,"robbery","M","Child","<12",280
+2020,"assault","U","Child","<12",246
+2016,"other","F","Child","<12",107
+2016,"assault","F","Adult","45-54",222
+2014,"other","F","Adult","25-34",173
+2020,"robbery","F","Adult","65+",63
+2019,"robbery","F","Child","<12",56
+2017,"assault","F","Adult","65+",185
+2018,"assault","U","Adult","45-54",198
+2020,"sexual assault","F","Youth","12-17",125
+2016,"other","M","Adult","35-44",141
+2015,"robbery","M","Adult","35-44",13
+2021,"other","M","Adult","35-44",9
+2017,"other","M","Child","<12",51
+2019,"sexual assault","F","Child","<12",125
+2020,"other","M","Adult","65+",3
+2019,"other","F","Youth","12-17",77
+2014,"robbery","M","Adult","65+",159
+2019,"other","F","Youth","12-17",185
+2021,"assault","F","Adult","35-44",276
+2016,"other","M","Unknown","Unknown",129
+2015,"assault","F","Adult","25-34",32
+2016,"other","F","Adult","35-44",200
+2014,"other","M","Adult","45-54",92
+2015,"sexual assault","F","Adult","65+",280
+2015,"sexual assault","F","Youth","12-17",39
+2021,"assault","M","Adult","18-24",235
+2017,"assault","M","Youth","12-17",251
+2022,"robbery","M","Youth","12-17",1795
+2020,"sexual assault","F","Adult","45-54",124
+2021,"other","F","Unknown","Unknown",79
+2016,"assault","M","Adult","45-54",128
+2019,"sexual assault","F","Child","<12",146
+2019,"other","F","Adult","18-24",284
+2021,"other","M","Adult","45-54",188
+2014,"other","F","Youth","12-17",30
+2015,"robbery","F","Child","<12",231
+2018,"sexual assault","U","Adult","65+",110
+2021,"sexual assault","F","Adult","18-24",190
+2021,"other","M","Adult","18-24",1669
+2020,"sexual assault","M","Adult","35-44",224
+2018,"robbery","F","Child","<12",2075
+2014,"other","M","Child","<12",112
+2022,"assault","M","Youth","12-17",1681
+2022,"robbery","F","Child","<12",1916
+2020,"sexual assault","F","Adult","25-34",68
+2017,"other","M","Adult","18-24",32
+2021,"robbery","F","Adult","18-24",287
+2017,"robbery","F","Adult","18-24",121
+2016,"assault","M","Adult","25-34",111
+2020,"sexual assault","M","Child","<12",265
+2014,"sexual assault","M","Adult","18-24",81
+2019,"assault","M","Youth","12-17",168
+2014,"other","F","Adult","25-34",216
+2020,"assault","U","Child","<12",170
+2018,"robbery","U","Youth","12-17",54
+2019,"sexual assault","M","Adult","65+",178
+2019,"assault","F","Child","<12",1604
+2022,"assault","M","Child","<12",1410
+2021,"sexual assault","M","Youth","12-17",284
+2014,"assault","F","Youth","12-17",60
+2019,"other","F","Adult","45-54",161
+2015,"other","M","Adult","25-34",16
+2021,"assault","M","Youth","12-17",121
+2021,"sexual assault","F","Youth","12-17",1705
+2022,"assault","F","Child","<12",245
+2021,"robbery","F","Youth","12-17",208
+2022,"sexual assault","F","Adult","25-34",268
+2022,"other","M","Child","<12",190
+2017,"sexual assault","F","Child","<12",135
+2014,"other","M","Adult","45-54",79
+2016,"robbery","F","Adult","45-54",1996
+2021,"assault","F","Child","<12",139
+2015,"sexual assault","U","Adult","65+",248
+2014,"other","M","Youth","12-17",242
+2022,"assault","M","Adult","65+",75
+2020,"assault","F","Youth","12-17",28
+2020,"other","U","Youth","12-17",179
+2017,"other","F","Adult","35-44",5
+2020,"robbery","M","Youth","12-17",288
+2017,"assault","F","Adult","65+",145
+2022,"robbery","M","Youth","12-17",100
+2017,"assault","F","Adult","18-24",266
+2022,"sexual assault","M","Adult","45-54",214
+2021,"robbery","M","Adult","35-44",1227
+2020,"robbery","M","Adult","65+",172
+2022,"assault","M","Adult","45-54",2104
+2016,"robbery","F","Youth","12-17",165
+2014,"robbery","M","Adult","35-44",277
+2020,"other","F","Unknown","Unknown",289
+2016,"other","M","Adult","18-24",215
+2020,"sexual assault","F","Adult","18-24",124
+2016,"robbery","F","Youth","12-17",25
+2019,"other","M","Adult","35-44",1880
+2020,"sexual assault","M","Unknown","Unknown",276
+2017,"robbery","M","Youth","12-17",284
+2014,"sexual assault","M","Adult","45-54",164
+2021,"robbery","M","Adult","65+",262
+2018,"other","M","Adult","65+",383
+2016,"assault","M","Youth","12-17",190
+2018,"other","M","Adult","65+",1619
+2018,"other","F","Youth","12-17",258
+2019,"assault","M","Child","<12",960
+2022,"sexual assault","U","Adult","45-54",169
+2014,"sexual assault","U","Adult","65+",43
+2017,"robbery","M","Child","<12",43
+2016,"assault","M","Adult","45-54",143
+2018,"sexual assault","U","Child","<12",286
+2015,"robbery","M","Adult","35-44",256
+2014,"other","F","Child","<12",1
+2017,"robbery","M","Child","<12",86
+2017,"sexual assault","M","Unknown","Unknown",153
+2018,"other","F","Adult","65+",11
+2019,"sexual assault","M","Adult","25-34",289
+2017,"sexual assault","F","Unknown","Unknown",189
+2016,"assault","U","Adult","25-34",1363
+2016,"other","F","Unknown","Unknown",232
+2014,"sexual assault","F","Youth","12-17",198
+2020,"assault","M","Youth","12-17",84
+2018,"other","M","Child","<12",22
+2020,"sexual assault","M","Adult","45-54",1744
+2022,"assault","F","Adult","25-34",244
+2022,"assault","F","Adult","25-34",159
+2021,"robbery","F","Adult","18-24",95
+2014,"assault","M","Child","<12",226
+2018,"assault","F","Adult","65+",180
+2018,"assault","U","Child","<12",279
+2021,"assault","M","Unknown","Unknown",44
+2015,"sexual assault","F","Youth","12-17",243
+2019,"robbery","F","Adult","45-54",172
+2015,"other","F","Unknown","Unknown",219
+2017,"sexual assault","F","Adult","25-34",180
+2020,"other","F","Child","<12",260
+2019,"assault","U","Youth","12-17",171
+2021,"robbery","F","Youth","12-17",134
+2014,"robbery","M","Adult","65+",1873
+2021,"assault","M","Adult","25-34",295
+2018,"other","F","Youth","12-17",267
+2022,"assault","F","Adult","18-24",273
+2021,"other","M","Adult","35-44",74
+2017,"assault","M","Adult","25-34",232
+2022,"robbery","F","Child","<12",257
+2022,"other","F","Child","<12",16
+2017,"robbery","F","Adult","25-34",300
+2016,"assault","M","Child","<12",160
+2020,"sexual assault","U","Adult","45-54",147
+2017,"other","F","Youth","12-17",5
+2021,"robbery","U","Adult","25-34",127
+2021,"robbery","F","Youth","12-17",285
+2018,"robbery","M","Youth","12-17",83
+2018,"assault","F","Youth","12-17",227
+2021,"robbery","F","Adult","65+",165
+2019,"robbery","F","Adult","25-34",271
+2017,"other","F","Adult","25-34",9
+2016,"assault","F","Adult","45-54",421
+2020,"robbery","F","Youth","12-17",93
+2018,"other","F","Adult","18-24",6
+2021,"sexual assault","M","Adult","25-34",129
+2022,"assault","F","Youth","12-17",1983
+2016,"assault","F","Youth","12-17",1903
+2021,"assault","U","Youth","12-17",14
+2016,"assault","F","Child","<12",171
+2015,"sexual assault","F","Unknown","Unknown",167
+2021,"sexual assault","F","Unknown","Unknown",1812
+2020,"other","M","Unknown","Unknown",118
+2020,"other","U","Child","<12",1282
+2019,"other","M","Child","<12",35
+2014,"assault","M","Unknown","Unknown",182
+2017,"robbery","M","Adult","65+",36
+2014,"robbery","F","Child","<12",142
+2018,"assault","M","Adult","25-34",159
+2015,"assault","F","Youth","12-17",76
+2020,"assault","M","Child","<12",63
+2021,"assault","F","Adult","25-34",935
+2016,"assault","M","Adult","35-44",234
+2015,"assault","M","Adult","25-34",140
+2019,"assault","F","Child","<12",84
+2016,"other","M","Adult","25-34",1904
+2022,"robbery","F","Youth","12-17",8
+2020,"sexual assault","F","Child","<12",28
+2022,"sexual assault","M","Adult","25-34",198
+2019,"sexual assault","M","Adult","18-24",16
+2021,"robbery","M","Adult","18-24",118
+2022,"sexual assault","M","Child","<12",2079
+2018,"assault","F","Youth","12-17",80
+2020,"sexual assault","M","Adult","18-24",251
+2022,"other","M","Adult","18-24",195
+2015,"other","F","Adult","25-34",273
+2021,"robbery","M","Youth","12-17",1687
+2022,"assault","F","Youth","12-17",39
+2021,"sexual assault","M","Adult","25-34",1247
+2017,"other","F","Adult","65+",50
+2020,"other","F","Unknown","Unknown",182
+2021,"other","M","Youth","12-17",124
+2015,"assault","M","Youth","12-17",90
+2019,"sexual assault","M","Adult","65+",69
+2014,"robbery","F","Adult","25-34",134
+2019,"assault","M","Youth","12-17",243
+2018,"other","M","Adult","25-34",44
+2022,"other","U","Youth","12-17",83
+2015,"sexual assault","M","Adult","35-44",270
+2016,"other","F","Youth","12-17",1595
+2016,"other","U","Unknown","Unknown",17
+2015,"assault","M","Adult","18-24",119
+2021,"sexual assault","F","Adult","25-34",139
+2021,"assault","M","Adult","25-34",113
+2015,"sexual assault","M","Youth","12-17",62
+2019,"sexual assault","F","Adult","35-44",248
+2020,"assault","M","Youth","12-17",758
+2014,"robbery","M","Adult","18-24",1753
+2020,"sexual assault","F","Adult","25-34",863
+2021,"other","U","Adult","18-24",143
+2019,"assault","F","Adult","65+",373
+2014,"sexual assault","M","Adult","45-54",28
+2020,"assault","M","Unknown","Unknown",136
+2020,"sexual assault","F","Youth","12-17",298
+2016,"other","M","Adult","25-34",267
+2014,"assault","F","Child","<12",1576
+2021,"other","M","Adult","45-54",124
+2014,"sexual assault","U","Child","<12",222
+2014,"robbery","M","Unknown","Unknown",68
+2015,"sexual assault","M","Child","<12",25
+2015,"assault","F","Adult","65+",88
+2017,"sexual assault","M","Adult","35-44",199
+2018,"assault","M","Youth","12-17",33
+2022,"robbery","F","Adult","18-24",35
+2016,"robbery","M","Child","<12",8
+2020,"other","M","Child","<12",607
+2020,"assault","M","Child","<12",86
+2015,"robbery","F","Youth","12-17",31
+2015,"robbery","M","Child","<12",206
+2018,"other","M","Adult","45-54",231
+2021,"robbery","M","Adult","35-44",52
+2017,"sexual assault","F","Adult","25-34",1795
+2017,"assault","U","Child","<12",64
+2020,"sexual assault","F","Child","<12",293
+2018,"sexual assault","U","Child","<12",270
+2015,"other","F","Adult","45-54",120
+2015,"assault","M","Adult","18-24",65
+2016,"robbery","M","Youth","12-17",35
+2019,"assault","M","Child","<12",149
+2015,"other","M","Youth","12-17",1782
+2022,"assault","F","Adult","45-54",1206
+2016,"assault","F","Adult","35-44",37
+2019,"other","F","Adult","18-24",264
+2016,"robbery","F","Adult","25-34",285
+2021,"robbery","F","Youth","12-17",194
+2014,"robbery","U","Youth","12-17",293
+2015,"assault","F","Adult","65+",142
+2018,"assault","F","Youth","12-17",76
+2018,"sexual assault","M","Child","<12",4
+2017,"other","M","Unknown","Unknown",264
+2020,"other","F","Unknown","Unknown",157
+2016,"assault","F","Adult","35-44",48
+2020,"other","F","Youth","12-17",218
+2020,"other","F","Adult","25-34",422
+2015,"assault","U","Adult","45-54",152
+2015,"robbery","M","Youth","12-17",74
+2015,"robbery","M","Child","<12",508
+2016,"sexual assault","M","Child","<12",227
+2021,"assault","M","Youth","12-17",255
+2022,"robbery","F","Unknown","Unknown",19
+2014,"other","F","Unknown","Unknown",229
+2020,"sexual assault","F","Adult","35-44",109
+2021,"other","F","Adult","45-54",28
+2014,"robbery","F","Adult","35-44",7
+2022,"other","F","Youth","12-17",61
+2016,"robbery","U","Child","<12",53
+2022,"sexual assault","F","Child","<12",244
+2015,"sexual assault","U","Unknown","Unknown",183
+2017,"sexual assault","F","Child","<12",946
+2021,"robbery","F","Adult","18-24",276
+2017,"sexual assault","M","Adult","45-54",257
+2015,"robbery","F","Child","<12",72
+2019,"sexual assault","M","Adult","25-34",272
+2016,"other","U","Adult","45-54",19
+2020,"sexual assault","M","Unknown","Unknown",26
+2016,"other","M","Adult","18-24",133
+2020,"assault","F","Adult","45-54",51
+2020,"other","M","Child","<12",162
+2020,"assault","F","Youth","12-17",146
+2020,"robbery","F","Youth","12-17",287
+2021,"robbery","M","Child","<12",43
+2021,"robbery","U","Youth","12-17",717
+2014,"assault","M","Child","<12",221
+2018,"other","F","Adult","45-54",128
+2022,"sexual assault","F","Unknown","Unknown",278
+2014,"sexual assault","M","Unknown","Unknown",2401
+2019,"other","M","Adult","35-44",254
+2022,"assault","M","Child","<12",281
+2021,"sexual assault","M","Adult","18-24",168
+2021,"sexual assault","F","Adult","25-34",2104
+2020,"sexual assault","F","Adult","25-34",273
+2020,"robbery","F","Child","<12",7
+2014,"sexual assault","M","Adult","65+",120
+2022,"robbery","F","Adult","45-54",735
+2021,"other","F","Child","<12",90
+2016,"sexual assault","U","Youth","12-17",210
+2021,"assault","U","Adult","35-44",90
+2019,"assault","M","Unknown","Unknown",187
+2014,"other","F","Child","<12",193
+2017,"sexual assault","M","Adult","18-24",202
+2016,"other","M","Adult","18-24",52
+2018,"other","M","Child","<12",290
+2020,"robbery","M","Child","<12",41
+2015,"sexual assault","F","Adult","65+",153
+2021,"other","F","Adult","18-24",154
+2021,"other","F","Adult","45-54",155
+2017,"assault","F","Adult","25-34",122
+2021,"sexual assault","M","Adult","35-44",49
+2019,"robbery","F","Youth","12-17",9
+2015,"robbery","F","Youth","12-17",53
+2014,"assault","F","Adult","45-54",220
+2022,"robbery","F","Unknown","Unknown",2308
+2016,"assault","F","Child","<12",32
+2018,"other","F","Adult","45-54",189
+2018,"assault","F","Child","<12",1889
+2022,"other","F","Youth","12-17",1001
+2017,"assault","M","Adult","18-24",245
+2016,"other","M","Adult","25-34",72
+2016,"assault","F","Adult","45-54",183
+2019,"sexual assault","U","Adult","25-34",213
+2017,"assault","M","Youth","12-17",77
+2020,"robbery","F","Adult","65+",207
+2022,"robbery","F","Adult","35-44",132
+2016,"sexual assault","M","Unknown","Unknown",97
+2019,"sexual assault","U","Child","<12",104
+2018,"sexual assault","M","Child","<12",230
+2022,"robbery","F","Youth","12-17",51
+2017,"other","F","Child","<12",18
+2016,"other","F","Child","<12",79
+2020,"other","M","Child","<12",39
+2017,"assault","F","Child","<12",861
+2018,"other","M","Adult","35-44",1651
+2021,"sexual assault","M","Youth","12-17",214
+2020,"sexual assault","F","Child","<12",74
+2021,"other","M","Adult","25-34",19
+2019,"sexual assault","F","Youth","12-17",12
+2021,"assault","F","Adult","45-54",241
+2020,"sexual assault","M","Adult","25-34",215
+2014,"assault","U","Adult","25-34",282
+2019,"sexual assault","M","Adult","18-24",22
+2019,"assault","M","Adult","65+",277
+2017,"assault","F","Youth","12-17",15
+2022,"assault","F","Unknown","Unknown",51
+2022,"other","F","Youth","12-17",1584
+2017,"other","F","Adult","35-44",196
+2018,"assault","U","Adult","65+",272
+2022,"assault","M","Youth","12-17",13
+2016,"assault","M","Adult","45-54",52
+2016,"robbery","M","Child","<12",298
+2015,"other","F","Adult","35-44",146
+2020,"robbery","F","Adult","18-24",30
+2014,"assault","F","Youth","12-17",199
+2016,"assault","M","Adult","25-34",75
+2020,"assault","F","Adult","35-44",183
+2015,"assault","M","Adult","45-54",239
+2022,"robbery","U","Child","<12",391
+2018,"robbery","M","Youth","12-17",48
+2014,"robbery","M","Adult","25-34",103
+2022,"other","F","Adult","25-34",29
+2022,"robbery","F","Adult","35-44",130
+2020,"assault","F","Adult","25-34",252
+2015,"assault","M","Youth","12-17",221
+2021,"other","F","Youth","12-17",285
+2020,"assault","F","Adult","35-44",46
+2019,"robbery","M","Adult","25-34",2094
+2020,"sexual assault","F","Adult","65+",173
+2015,"sexual assault","F","Adult","35-44",1812
+2015,"other","M","Child","<12",16
+2018,"sexual assault","M","Child","<12",201
+2020,"robbery","U","Child","<12",909
+2022,"robbery","F","Adult","45-54",1295
+2020,"robbery","M","Adult","25-34",250
+2019,"sexual assault","F","Youth","12-17",52
+2017,"other","M","Adult","65+",736
+2016,"assault","F","Adult","65+",100
+2016,"other","F","Adult","35-44",96
+2015,"robbery","F","Adult","65+",935
+2016,"robbery","M","Youth","12-17",619
+2014,"robbery","F","Youth","12-17",161
+2014,"assault","F","Youth","12-17",1614
+2014,"other","M","Child","<12",23
+2017,"sexual assault","F","Adult","65+",27
+2016,"robbery","F","Child","<12",168
+2015,"other","M","Adult","25-34",204
+2020,"sexual assault","M","Adult","65+",267
+2015,"assault","M","Adult","65+",265
+2015,"other","M","Child","<12",33
+2020,"other","U","Child","<12",122
+2017,"robbery","M","Youth","12-17",10
+2017,"other","F","Child","<12",1220
+2021,"assault","M","Child","<12",246
+2022,"other","M","Youth","12-17",164
+2016,"robbery","M","Unknown","Unknown",237
+2022,"assault","M","Adult","18-24",152
+2016,"sexual assault","F","Adult","18-24",46
+2019,"sexual assault","M","Adult","35-44",1231
+2018,"assault","F","Adult","25-34",206
+2015,"other","M","Child","<12",1358
+2019,"sexual assault","F","Child","<12",87
+2014,"other","F","Adult","18-24",85
+2018,"other","U","Adult","18-24",2470
+2016,"robbery","M","Youth","12-17",280
+2016,"other","M","Adult","45-54",96
+2016,"assault","U","Child","<12",135
+2019,"sexual assault","U","Youth","12-17",257
+2022,"sexual assault","M","Adult","45-54",176
+2016,"sexual assault","M","Youth","12-17",58
+2015,"other","F","Child","<12",125
+2018,"sexual assault","M","Adult","45-54",140
+2018,"robbery","U","Adult","18-24",111
+2020,"sexual assault","F","Child","<12",263
+2015,"robbery","M","Adult","25-34",240
+2021,"assault","M","Adult","25-34",1753
+2020,"sexual assault","M","Adult","25-34",147
+2020,"assault","M","Adult","65+",167
+2021,"assault","M","Youth","12-17",18
+2018,"robbery","F","Youth","12-17",131
+2015,"robbery","F","Adult","65+",17
+2016,"robbery","M","Adult","35-44",222
+2022,"assault","M","Adult","25-34",270
+2016,"other","F","Adult","45-54",1576
+2016,"other","F","Adult","45-54",173
+2018,"robbery","M","Adult","45-54",56
+2020,"assault","M","Adult","35-44",265
+2021,"robbery","U","Child","<12",151
+2017,"robbery","F","Adult","18-24",250
+2016,"assault","U","Unknown","Unknown",273
+2020,"other","M","Child","<12",17
+2021,"sexual assault","M","Child","<12",1559
+2014,"other","M","Adult","65+",279
+2020,"assault","M","Unknown","Unknown",161
+2022,"sexual assault","M","Child","<12",144
+2016,"robbery","U","Adult","45-54",97
+2019,"other","M","Child","<12",88
+2017,"robbery","M","Unknown","Unknown",167
+2022,"robbery","F","Child","<12",1890
+2018,"sexual assault","F","Child","<12",146
+2022,"robbery","M","Child","<12",30
+2022,"assault","F","Adult","35-44",2326
+2018,"assault","M","Adult","25-34",625
+2019,"other","M","Adult","18-24",99
+2019,"assault","F","Youth","12-17",1080
+2019,"robbery","M","Unknown","Unknown",135
+2021,"other","U","Unknown","Unknown",184
+2017,"other","F","Youth","12-17",277
+2021,"assault","F","Adult","35-44",93
+2020,"robbery","M","Youth","12-17",37
+2020,"sexual assault","M","Child","<12",1669
+2018,"sexual assault","F","Child","<12",253
+2021,"robbery","M","Youth","12-17",74
+2014,"other","M","Adult","65+",299
+2020,"robbery","M","Child","<12",1681
+2020,"sexual assault","F","Child","<12",1916
+2018,"other","F","Adult","45-54",24
+2014,"sexual assault","U","Adult","18-24",162
+2020,"sexual assault","M","Adult","65+",7
+2020,"other","U","Adult","18-24",209
+2016,"sexual assault","F","Youth","12-17",1097
+2016,"assault","M","Youth","12-17",422
+2022,"robbery","F","Youth","12-17",1395
+2014,"assault","M","Unknown","Unknown",293
+2022,"other","F","Adult","65+",51
+2020,"assault","M","Adult","65+",239
+2019,"other","M","Youth","12-17",221
+2014,"other","M","Adult","35-44",251
+2021,"other","M","Youth","12-17",171
+2018,"other","M","Child","<12",270
+2022,"robbery","U","Adult","45-54",247
+2018,"sexual assault","F","Adult","45-54",1345
+2016,"other","M","Child","<12",120
+2014,"robbery","M","Adult","65+",140
+2019,"sexual assault","M","Unknown","Unknown",158
+2017,"sexual assault","F","Child","<12",132
+2021,"other","F","Unknown","Unknown",237
+2022,"robbery","F","Child","<12",90
+2022,"robbery","M","Adult","18-24",41
+2021,"assault","M","Adult","45-54",835
+2020,"robbery","F","Adult","65+",74
+2017,"robbery","M","Unknown","Unknown",193
+2021,"robbery","M","Youth","12-17",202
+2018,"sexual assault","M","Adult","18-24",138
+2014,"assault","F","Child","<12",1747
+2014,"assault","F","Child","<12",107
+2018,"other","M","Child","<12",1813
+2016,"other","U","Youth","12-17",627
+2017,"other","F","Adult","25-34",78
+2016,"robbery","F","Child","<12",178
+2015,"other","F","Adult","65+",151
+2016,"robbery","M","Child","<12",1560
+2018,"sexual assault","F","Youth","12-17",45
+2021,"sexual assault","F","Youth","12-17",193
+2014,"assault","F","Child","<12",1580
+2018,"other","M","Adult","35-44",227
+2016,"other","M","Child","<12",50
+2019,"assault","M","Child","<12",238
+2015,"assault","M","Child","<12",31
+2014,"other","M","Adult","65+",157
+2020,"robbery","M","Adult","65+",208
+2014,"sexual assault","M","Child","<12",127
+2021,"sexual assault","F","Adult","45-54",148
+2016,"sexual assault","F","Adult","65+",3
+2015,"sexual assault","U","Adult","25-34",190
+2016,"sexual assault","F","Youth","12-17",2
+2018,"assault","M","Child","<12",281
+2021,"assault","U","Adult","35-44",1149
+2014,"robbery","F","Child","<12",298
+2015,"sexual assault","F","Child","<12",188
+2017,"robbery","M","Youth","12-17",88
+2020,"robbery","M","Unknown","Unknown",152
+2018,"other","M","Adult","18-24",1630
+2017,"sexual assault","F","Adult","65+",292
+2021,"other","F","Unknown","Unknown",215
+2014,"other","M","Child","<12",36
+2018,"sexual assault","U","Adult","18-24",731
+2020,"robbery","M","Adult","18-24",575
+2019,"assault","F","Unknown","Unknown",212
+2014,"other","M","Adult","35-44",2308
+2020,"robbery","M","Child","<12",1923
+2015,"sexual assault","M","Youth","12-17",114
+2018,"other","M","Child","<12",101
+2016,"robbery","M","Child","<12",261
+2015,"sexual assault","F","Youth","12-17",116
+2019,"other","U","Adult","65+",522
+2015,"sexual assault","F","Youth","12-17",259
+2016,"robbery","F","Adult","18-24",178
+2016,"robbery","F","Adult","35-44",136
+2017,"assault","F","Child","<12",461
+2022,"assault","M","Adult","45-54",118
+2018,"assault","M","Youth","12-17",171
+2015,"assault","M","Youth","12-17",207
+2022,"sexual assault","F","Youth","12-17",72
+2014,"assault","F","Youth","12-17",119
+2020,"assault","U","Adult","25-34",2442
+2014,"other","U","Youth","12-17",109
+2019,"sexual assault","M","Adult","35-44",2494
+2014,"other","U","Adult","65+",164
+2019,"robbery","M","Child","<12",241
+2021,"other","F","Youth","12-17",26
+2015,"other","F","Adult","45-54",40
+2018,"other","M","Adult","45-54",147
+2015,"sexual assault","U","Adult","25-34",116
+2018,"assault","F","Adult","65+",171
+2016,"sexual assault","M","Child","<12",298
+2019,"assault","M","Adult","18-24",15
+2019,"sexual assault","F","Unknown","Unknown",8
+2022,"assault","M","Child","<12",81
+2019,"sexual assault","U","Unknown","Unknown",162
+2017,"robbery","M","Youth","12-17",97
+2015,"robbery","F","Adult","65+",1584
+2020,"sexual assault","F","Youth","12-17",250
+2022,"assault","F","Adult","35-44",284
+2017,"sexual assault","F","Adult","65+",34
+2014,"assault","F","Adult","18-24",158
+2021,"robbery","F","Adult","18-24",67
+2016,"sexual assault","F","Youth","12-17",193
+2022,"other","M","Adult","35-44",39
+2019,"robbery","M","Youth","12-17",11
+2016,"sexual assault","F","Adult","35-44",163
+2016,"sexual assault","F","Youth","12-17",209
+2017,"robbery","F","Adult","25-34",96
+2019,"sexual assault","F","Child","<12",111
+2015,"other","U","Child","<12",298
+2020,"other","F","Adult","25-34",13
+2019,"assault","U","Youth","12-17",262
+2020,"assault","M","Youth","12-17",223
+2017,"sexual assault","F","Adult","25-34",191
+2020,"other","F","Child","<12",193
+2017,"assault","M","Child","<12",218
+2022,"assault","M","Unknown","Unknown",165
+2018,"sexual assault","M","Child","<12",250
+2022,"other","F","Adult","45-54",145
+2022,"other","U","Child","<12",131
+2016,"robbery","M","Adult","35-44",208
+2014,"robbery","M","Adult","45-54",64
+2022,"robbery","F","Adult","18-24",18
+2022,"assault","M","Adult","45-54",273
+2016,"assault","U","Adult","45-54",4
+2017,"other","F","Youth","12-17",10
+2020,"other","M","Child","<12",736
+2022,"other","M","Youth","12-17",1228
+2021,"sexual assault","F","Adult","25-34",1768
+2016,"other","F","Child","<12",186
+2019,"robbery","U","Adult","35-44",260
+2014,"sexual assault","F","Unknown","Unknown",127
+2022,"assault","M","Child","<12",87
+2022,"other","F","Adult","35-44",99
+2020,"assault","F","Adult","45-54",45
+2021,"assault","F","Adult","35-44",255
+2014,"sexual assault","F","Child","<12",230
+2021,"assault","M","Youth","12-17",104
+2015,"other","M","Unknown","Unknown",211
+2021,"other","F","Unknown","Unknown",88
+2019,"sexual assault","F","Youth","12-17",1412
+2022,"sexual assault","F","Adult","25-34",91
+2015,"assault","U","Child","<12",186
+2020,"sexual assault","U","Child","<12",1975
+2020,"assault","F","Unknown","Unknown",77
+2022,"sexual assault","U","Adult","25-34",1069
+2016,"other","F","Child","<12",203
+2016,"assault","M","Adult","35-44",55
+2018,"robbery","F","Youth","12-17",71
+2015,"sexual assault","U","Adult","65+",204
+2017,"robbery","F","Child","<12",90
+2014,"sexual assault","M","Adult","18-24",84
+2018,"other","M","Child","<12",289
+2021,"sexual assault","F","Unknown","Unknown",2470
+2018,"assault","F","Adult","65+",288
+2019,"sexual assault","M","Youth","12-17",281
+2022,"assault","F","Child","<12",658
+2016,"robbery","M","Child","<12",205
+2014,"assault","M","Child","<12",278
+2022,"assault","U","Child","<12",14
+2015,"robbery","F","Child","<12",220
+2014,"assault","F","Unknown","Unknown",208
+2021,"sexual assault","M","Youth","12-17",226
+2022,"other","M","Child","<12",87
+2015,"assault","F","Youth","12-17",71
+2016,"other","M","Adult","18-24",121
+2019,"other","F","Youth","12-17",60
+2014,"sexual assault","M","Adult","35-44",230
+2020,"other","U","Youth","12-17",57
+2015,"assault","F","Adult","35-44",55
+2018,"sexual assault","U","Child","<12",29
+2016,"robbery","M","Adult","25-34",251
+2020,"sexual assault","M","Adult","18-24",2067
+2015,"robbery","F","Unknown","Unknown",187
+2021,"sexual assault","U","Unknown","Unknown",168
+2016,"assault","M","Adult","35-44",46
+2017,"other","F","Youth","12-17",120
+2016,"robbery","M","Youth","12-17",976
+2016,"robbery","U","Youth","12-17",174
+2015,"assault","U","Child","<12",272
+2017,"robbery","F","Child","<12",155
+2017,"other","F","Adult","35-44",62
+2019,"other","M","Adult","25-34",156
