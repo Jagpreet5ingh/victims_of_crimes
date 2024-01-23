@@ -10,7 +10,8 @@
 library(tidyverse)
 
 #tests
-data = read_csv("output/data/simulated_data.csv")
+data = read_csv("output/data/simulated_data.csv", show_col_types = FALSE)
+
 
 #test 1 : Report_Year is within the range
 all(data$REPORT_YEAR >= 2014 & data$REPORT_YEAR<=2022)
