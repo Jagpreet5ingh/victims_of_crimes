@@ -1,0 +1,85 @@
+URL for chat history : https://chat.openai.com/share/6b68677c-5753-4da8-9e2d-6978e91a484f
+
+# Assuming the column SUBTYPE exists in your dataset
+crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
+column_specifications <- spec(crime_data)
+
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Create a scatter plot using ggplot2 with sex on the x-axis
+ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(title = "Total count of crimes against the person of each sex per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("F" = "blue", "M" = "red", "U" = "brown"),
+                     labels = c("F" = "Female", "M" = "Male", "U" = "Unknown")) +  # Specify colors and labels
+  theme_minimal()----------------CREATE a line graph with age_group instead of sex. the graph should represent total number of crimes against each age group each year
+ChatGPT
+Certainly! To create a line graph with age groups instead of sex, representing the total number of crimes against each age group each year, you can modify the code as follows:
+
+R
+Copy code
+# Assuming the column AGE_GROUP exists in your dataset
+age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_GROUP, data = crime_data, sum)
+
+# Create a line graph using ggplot2 with age_group on the x-axis
+ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP, group = AGE_GROUP)) +
+  geom_line(size = 1, alpha = 0.7) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(title = "Total count of crimes against each age group per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("18-24" = "blue", "25-34" = "red", "35-44" = "green", "45-54" = "purple", "55+" = "orange"),
+                     labels = c("18-24" = "18-24", "25-34" = "25-34", "35-44" = "35-44", "45-54" = "45-54", "55+" = "55+")) +  # Specify colors and labels
+  theme_minimal()
+Make sure to replace "AGE_GROUP" with the actual column name representing age groups in your dataset. Additionally, adjust the color values and labels in scale_color_manual according to your preference and the unique values in your age group column.
+
+the age_group has four categories : Youth, Child, Adult, Unknown
+ChatGPT
+Great! If your AGE_GROUP column has four categories: "Youth," "Child," "Adult," and "Unknown," you can modify the code as follows:
+
+R
+Copy code
+# Assuming the column AGE_GROUP exists in your dataset
+age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_GROUP, data = crime_data, sum)
+
+# Create a line graph using ggplot2 with age_group on the x-axis
+ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP, group = AGE_GROUP)) +
+  geom_line(size = 1, alpha = 0.7) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(title = "Total count of crimes against each age group per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("Youth" = "blue", "Child" = "red", "Adult" = "green", "Unknown" = "purple"),
+                     labels = c("Youth" = "Youth", "Child" = "Child", "Adult" = "Adult", "Unknown" = "Unknown")) +  # Specify colors and labels
+  theme_minimal()
+Adjust the column name ("AGE_GROUP") based on the actual column name in your dataset, and adjust the color values and labels in scale_color_manual according to the categories in your age group column.
+
+
+add another variable to the graph: SEX. Sex have 3 categories Male, Female or Unknown
+ChatGPT
+Certainly! You can add another variable (SEX) to the graph using facets. Facets will create separate panels for each combination of age group and sex. Here's the modified code:
+
+R
+Copy code
+# Assuming the columns AGE_GROUP and SEX exist in your dataset
+age_sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_GROUP + SEX, data = crime_data, sum)
+
+# Create a line graph using ggplot2 with age_group on the x-axis and facets for sex
+ggplot(age_sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX, group = interaction(AGE_GROUP, SEX))) +
+  geom_line(size = 1, alpha = 0.7) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(title = "Total count of crimes against each age group per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(age_sex_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("Male" = "blue", "Female" = "red", "Unknown" = "purple"),
+                     labels = c("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown")) +  # Specify colors and labels
+  facet_grid(AGE_GROUP ~ ., scales = "free_y", labeller = labeller(AGE_GROUP = label_wrap_gen(width = 10))) +  # Facets for age groups
+  theme_minimal()
+This code uses facet_grid to create separate panels for each combination of age group and sex. Adjust the column names ("AGE_GROUP" and "SEX") based on the actual column names in your dataset, and adjust the color values and labels in scale_color_manual according to the categories in your sex column.
