@@ -1,24 +1,55 @@
 ---
-title: "Understanding Vulnerability: Toronto Police Service's Annual Statistical Report on Crimes Against the Person(2014-2022)"
+title: "Understanding Vulnerability: An Analysis of Toronto Police Service's Annual Statistical Report on Crimes Against the Person(2014-2022)"
 author: "Jagpreet Singh"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+date-format: long
+bibliography: references.bib
+execute: 
+  echo: false
 format: pdf
-editor: visual
-Abstract:
+fig-pos: "H"
+abstract: This study analysis the trends of crimes against the person reported to the Toronto Police from 2014-2022.The data was obtained from OpenDataToronto. On a first look, the data does not show a drastic increase or decrease in the number of crimes against the person reported each year to Toronto Police. However, on taking a deep dive into the data we find underlying trends that are shaping over the years. There has been some shifts in the type of crimes being reported and the victims of the crime. This research is crucial as it provides insights into Toronto's crime data and help inform the vulnerables.
 ---
 
 ```{r}
 knitr::opts_chunk$set(echo = FALSE, results ="hide", message = FALSE, warning = FALSE)
 ```
 
-## Introduction
+# Introduction
 
-## Data
+# Data
+
+The dataset being used in this paper was obtained from City of Toronto's Open data portal using the opendatatoronto package [@opendatatoronto].
+
+This dataset includes all identified victims of crimes against the person, including, but not limited to, those that may have been deemed unfounded after investigation, those that may have occurred outside the City of Toronto limits, or have no verified location[@opendatatoronto]
+
+The data has been aggregated by reported year, geographic police division, offence subtype, sex, and age group [@opendatatoronto].
+
+## Limitations
+
+-   Age calculated from date of occurrence [@opendatatoronto]
+
+-   Filtered by reported year [@opendatatoronto]
+
+-   Victims only for CCJS Level 1 = 'Crimes Against the Person' and where the victim name is not null [@opendatatoronto]
+
+## **Data Quality**
+
+As of 23 January, 2024, the dataset was last refreshed on 14 January, 2024 with an overall data quality score of 99% and with a gold rating [@opendatatoronto].
+
+The dataset has a score of 100% for freshness which means the data set is up-to-date and refreshed on schedule [@opendatatoronto].
+
+The dataset has a score of 100% for metadata and completeness which means the data is well described and complete [@opendatatoronto].
+
+The dataset has a score of 93% for Usability due to one column "Category" having constant values.
+
+# Analysis and Data Visualization
 
 ```{r}
 #| lable: Table 1
 
 library("tidyverse")
-
+setwd("/cloud/project") # to ensure directory is not reset to a different path
 # Read data
 crime_data <- read_csv("output/data/edited_data.csv",show_col_types = FALSE) 
 column_specifications <- spec(crime_data)
@@ -33,9 +64,11 @@ crime_table <- data.frame(Year = total_counts$REPORT_YEAR, Total_Number_of_Crime
 print(crime_table)
 ```
 
+## Yearly Trends on Crime Against the Person
+
 ```{r}
 #| label: Fig-1
-
+setwd("/cloud/project")
 library("tidyverse")
 
 # Read data
@@ -47,7 +80,7 @@ total_counts <- aggregate(COUNT_ ~ REPORT_YEAR, data = crime_data, sum)
 ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +   
   geom_bar(stat = "identity", fill = "blue", alpha = 0.7) + 
    geom_line(aes(group = 1), stat = "smooth", method = "lm", se = FALSE, color = "red", linetype = "solid") +  # Add trendline
-  labs(title = "Total count of crimes against the person per year (2014-2022)",      
+  labs(caption = "Total count of crimes against the person per year (2014-2022)",      
        x = "Year",        
        y = "Total Number of Crimes") +  
   scale_y_continuous(breaks = seq(0, max(total_counts$COUNT_), by = 2000)) + # Set y-axis breaks
@@ -55,9 +88,11 @@ ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +
 
 ```
 
+## Crimes Against the Person Per Year by Type of Crime
+
 ```{r}
 #| label: fig-2
-
+setwd("/cloud/project")
 # Read data
 crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
 column_specifications <- spec(crime_data)
@@ -68,7 +103,7 @@ subtype_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SUBTYPE, data = crime_data, s
 # Create a bar graph using ggplot2 with subtype on the bars
 ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYPE)) +
   geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
-  labs(title = "Total count of crimes against the person per year by type of crime (2014-2022)",
+  labs(caption = "Total count of crimes against the person per year by type of crime (2014-2022)",
        x = "Year",
        y = "Total Number of Crimes") +
   scale_y_continuous(breaks = seq(0, max(subtype_counts$COUNT_), by = 2000)) +
@@ -76,9 +111,11 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
 
 ```
 
+## Distribution of Crimes Against the Person by Gender
+
 ```{r}
 #| label: fig-3
-
+setwd("/cloud/project")
 # Read data
 crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
 column_specifications <- spec(crime_data)
@@ -89,7 +126,7 @@ sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
 # Create a scatter plot using ggplot2 with sex on the x-axis
 ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
   geom_point(size = 3, alpha = 0.7) +
-  labs(title = "Total count of crimes against the person of each sex per year",
+  labs(caption = "Total count of crimes against the person of each sex per year",
        x = "Year",
        y = "Total Number of Crimes") +
   scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
@@ -100,10 +137,12 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
 
 ```
 
+## Distribution of Crimes Against the Person by Age Group
+
 ```{r}
 
 #| label: fig-4
-
+setwd("/cloud/project")
 # Read data
 crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
 column_specifications <- spec(crime_data)
@@ -115,7 +154,7 @@ age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_GROUP, data = crime_data, sum
 ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP, group = AGE_GROUP)) +
   geom_line(linewidth = 1, alpha = 0.7) +
   geom_point(size = 3, alpha = 0.7) +
-  labs(title = "Total count of crimes against the person of each age group per year",
+  labs(caption = "Total count of crimes against the person of each age group per year",
        x = "Year",
        y = "Total Number of Crimes") +
   scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
@@ -129,7 +168,7 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
 
 ```{r}
 #| label: Table-2
-
+setwd("/cloud/project")
 library("tidyverse")
 
 # Read data
@@ -145,3 +184,5 @@ print(result_table)
 
 
 ```
+
+# Refrences
