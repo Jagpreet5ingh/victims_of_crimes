@@ -1,0 +1,143 @@
+Chat history URL: https://chat.openai.com/share/3b54de8c-0ada-485c-a3cd-e6bd5832cd38
+
+# Assuming the column SUBTYPE exists in your dataset
+crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
+column_specifications <- spec(crime_data)
+
+# Aggregate total counts by REPORT_YEAR and SUBTYPE
+subtype_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SUBTYPE, data = crime_data, sum)
+
+# Create a bar graph using ggplot2 with subtype on the bars
+ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYPE)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
+  labs(title = "Total count of crimes against the person per year by type of crime (2014-2022)",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(subtype_counts$COUNT_), by = 2000)) +
+  theme_minimal()
+``` ---------------- create a scatter graph but swap subtype with Sex, that can have one of the three value, M, F, U. Count the total number of crimes agains each sex each year
+ChatGPT
+Certainly! To create a scatter plot with Sex on the x-axis and total number of crimes against each sex each year on the y-axis, you can modify the code as follows:
+
+R
+Copy code
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Create a scatter plot using ggplot2 with sex on the x-axis
+ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(title = "Total count of crimes against each sex per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
+  theme_minimal()
+This code aggregates the total counts by REPORT_YEAR and SEX and then creates a scatter plot with Year on the x-axis, Total Number of Crimes on the y-axis, and different colors for each sex. Adjust the aesthetics and themes as needed based on your preferences.
+
+can i add numbers next to the dots?
+ChatGPT
+Certainly! You can add numbers next to the dots by using the geom_text() function in ggplot2. Here's the modified code:
+
+R
+Copy code
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Create a scatter plot using ggplot2 with sex on the x-axis
+ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_text(aes(label = COUNT_), vjust = -0.5, hjust = 0.5, size = 3) +  # Add text labels
+  labs(title = "Total count of crimes against each sex per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
+  theme_minimal()
+This modification includes the geom_text() function, which adds text labels to the plot based on the COUNT_ variable. The vjust and hjust arguments control the vertical and horizontal justification of the text labels, respectively. Adjust the size and other parameters as needed for your specific visualization preferences.
+
+how can I expand the legend to sat F means Female, M means male and U means Unknown
+ChatGPT
+To expand the legend with labels such as "Female," "Male," and "Unknown," you can use the scale_color_manual() function to manually define the colors and labels for each category. Here's the modified code:
+
+R
+Copy code
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Create a scatter plot using ggplot2 with sex on the x-axis
+ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_text(aes(label = COUNT_), vjust = -0.5, hjust = 0.5, size = 3) +  # Add text labels
+  labs(title = "Total count of crimes against each sex per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("F" = "blue", "M" = "red", "U" = "gray"),
+                     labels = c("F" = "Female", "M" = "Male", "U" = "Unknown")) +  # Specify colors and labels
+  theme_minimal()
+In this code, the scale_color_manual() function is used to manually define the colors (values) for each category and provide custom labels (labels). Adjust the colors and labels as needed for your preferences.
+
+remove number from the dots
+ChatGPT
+If you want to remove the numbers from the dots, you can simply remove the geom_text() part from the code. Here's the modified code without the numbers:
+
+R
+Copy code
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Create a scatter plot using ggplot2 with sex on the x-axis
+ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(title = "Total count of crimes against each sex per year",
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("F" = "blue", "M" = "red", "U" = "gray"),
+                     labels = c("F" = "Female", "M" = "Male", "U" = "Unknown")) +  # Specify colors and labels
+  theme_minimal()
+This code retains the scatter plot with colors representing different sexes but removes the text labels from the dots. Adjust the remaining components of the plot as needed.
+
+create a table to show the numbers
+ChatGPT
+If you want to create a table to show the numbers for each combination of REPORT_YEAR and SEX, you can use functions from the knitr and kableExtra packages. Here's an example:
+
+R
+Copy code
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Load required packages
+library(knitr)
+library(kableExtra)
+
+# Create a table using kable
+table <- kable(sex_counts, format = "html", caption = "Total count of crimes against each sex per year") %>%
+  kable_styling("striped", full_width = FALSE) %>%
+  add_header_above(c(" ", "Total Number of Crimes" = 2))  # Adjust header if needed
+
+# Print the table
+print(table)
+This code creates an HTML table using the kable() function from the knitr package and enhances the appearance using the kableExtra package. You can adjust the formatting options according to your preferences. The resulting table will display the total number of crimes for each combination of REPORT_YEAR and SEX.
+
+use tidyverse
+ChatGPT
+Certainly! You can use the tidyverse package, specifically the dplyr and tidyr packages, to create a table. Here's an example:
+
+R
+Copy code
+# Assuming the column SEX exists in your dataset
+sex_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SEX, data = crime_data, sum)
+
+# Load required packages
+library(tidyverse)
+
+# Create a table using dplyr and tidyr
+table <- sex_counts %>%
+  pivot_wider(names_from = SEX, values_from = COUNT_) %>%
+  rename(Total_Crimes_Female = F, Total_Crimes_Male = M, Total_Crimes_Unknown = U) %>%
+  arrange(REPORT_YEAR) %>%
+  knitr::kable(caption = "Total count of crimes against each sex per year")
+
+# Print the table
+cat(table)
+This code uses the pivot_wider function from tidyr to reshape the data and create separate columns for each sex. The rename function is used to provide more meaningful column names. Finally, the kable function is used to create a table suitable for printing. Adjust the column names and formatting options according to your preferences.
