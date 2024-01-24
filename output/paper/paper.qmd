@@ -51,25 +51,10 @@ The dataset has a score of 93% for Usability due to one column "Category" having
 
 # Analysis and Data Visualization
 
-```{r}
 
-#| lable: Table 1
-
-library("tidyverse")
-setwd("/cloud/project") # to ensure directory is not reset to a different path
-# Read data
-crime_data <- read_csv("output/data/edited_data.csv",show_col_types = FALSE) 
-column_specifications <- spec(crime_data)
-
-# Calculate total number of crimes reported per year
-total_counts <- aggregate(COUNT_ ~ REPORT_YEAR, data = crime_data, sum)
-
-# Create a data frame for the table
-crime_table <- data.frame(Year = total_counts$REPORT_YEAR, Total_Number_of_Crimes = total_counts$COUNT_)
-
-```
 
 ## Yearly Trends on Crime Against the Person
+
 
 ```{r}
 #| eval: true
@@ -187,23 +172,5 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
 
 ```
 
-```{r}
-#| label: Table-2
-setwd("/cloud/project")
-library("tidyverse")
-
-# Read data
-crime_data <- read_csv("output/data/edited_data.csv",show_col_types = FALSE) 
-column_specifications <- spec(crime_data)
-
-# Create a table with unique combinations of AGE_GROUP and corresponding AGE_COHORT values
-result_table <- crime_data %>%
-  distinct(AGE_GROUP, AGE_COHORT)
-
-# Print the resulting table
-print(result_table)
-
-
-```
 
 # Refrences
