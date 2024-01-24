@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-This repo documents the steps and processes used to formulate the paper *"Understanding Vulnerability: Toronto Police Service's Annual Statistical Report on Crimes Against the Person (2014-2022)"*.
+This repo documents the steps and processes used to formulate the paper *"Understanding Vulnerability: An Analysis of Toronto Police Service's Annual Statistical Report on Crimes Against the Person (2014-2022)"*.
 
 Use this folder to reproduce the results on your own.
 
