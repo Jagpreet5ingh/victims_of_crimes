@@ -1,10 +1,10 @@
 #### Preamble ####
-# Purpose : Clean the Raw Victims of Crimes data obtained from opentorontodata
+# Purpose : Clean the Raw victims_of_crimes data obtained from opentorontodata
 # Author : Jagpreet Singh
 # Date : 21 January, 2024
 # Contact : jagpreetsingh.singh@mail.utoronto.ca
 # License : MIT
-# Prerequisite : Tidyverse should be installed
+# Prerequisite : install.packages("tidyverse") should be run if not pre-existing
 
 
 #### Workspace Setup ####
