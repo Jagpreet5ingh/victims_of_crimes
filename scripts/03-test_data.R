@@ -4,7 +4,7 @@
 # Date : 21 January 2024
 # Contact : jagpreetsingh.singh@mail.utoronto.ca
 # License : MIT
-# Pre-requisites : N/A
+# Pre-requisites : install.packages("tidyverse") should be run if not pre-existing
 
 # workspace setup #
 library(tidyverse)
