@@ -1,10 +1,10 @@
 #### Preamble ####
-# Purpose : Simulates the 2014-2022 Victims of Crime data
+# Purpose : Simulates the victims_of_crimes 2014-2022 data 
 # Author : Jagpreet Singh
 # Date : 21 January, 2024
 # Contact : jagpreetsingh.singh@mail.utoronto.ca
 # License : MIT
-# Prerequisite : Tidyverse should be installed
+# Prerequisite : install.packages("tidyverse") should be run if this package is not pre-installed
 
 
 #### Workspace Setup ####
