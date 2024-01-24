@@ -8,7 +8,7 @@ execute:
   echo: false
 format: pdf
 fig-pos: "H"
-abstract: This study analysis the trends of crimes against the person reported to the Toronto Police from 2014-2022.The data was obtained from OpenDataToronto. On a first look, the data does not show a drastic increase or decrease in the number of crimes against the person reported each year to Toronto Police. However, on taking a deep dive into the data we find underlying trends that are shaping over the years. There has been some shifts in the type of crimes being reported and the victims of the crime. This research is crucial as it provides insights into Toronto's crime data and help inform the vulnerables.
+abstract: This study analyzes the trends of crimes against the person reported to the Toronto Police from 2014-2022.The data was obtained from OpenDataToronto. On a first look, the data does not show a drastic increase or decrease in the number of crimes against the person reported each year to Toronto Police. However, on taking a deep dive into the data we find underlying trends that are shaping over the years. There has been some shifts in the type of crimes being reported and the victims of the crime. This research is crucial as it provides insights into Toronto's crime data and help inform the vulnerables.
 ---
 
 ```{r}
@@ -25,28 +25,28 @@ Code and data supporting this analysis is available.[^1]
 
 # Data
 
+
 The dataset being used in this paper was obtained from City of Toronto's Open data portal using the opendatatoronto package [@opendatatoronto].
 
-This dataset includes all identified victims of crimes against the person, including, but not limited to, those that may have been deemed unfounded after investigation, those that may have occurred outside the City of Toronto limits, or have no verified location[@opendatatoronto]
+This dataset includes all identified victims of crimes against the person, including, but not limited to, those that may have been deemed unfounded after investigation, those that may have occurred outside the City of Toronto limits, or have no verified location. 
 
-The data has been aggregated by reported year, geographic police division, offence subtype, sex, and age group [@opendatatoronto].
+The data has been aggregated by reported year, geographic police division, offence subtype, sex, and age group.
 
 ## Limitations
 
--   Age calculated from date of occurrence [@opendatatoronto]
+-   Age calculated from date of occurrence 
 
--   Filtered by reported year [@opendatatoronto]
+-   Filtered by reported year 
 
--   Victims only for CCJS Level 1 = 'Crimes Against the Person' and where the victim name is not null [@opendatatoronto]
+-   Victims only for CCJS Level 1 = 'Crimes Against the Person' and where the victim name is not null 
 
 ## **Data Quality**
 
-As of 23 January, 2024, the dataset was last refreshed on 14 January, 2024 with an overall data quality score of 99% and with a gold rating [@opendatatoronto].
+As of 23 January, 2024, the dataset was last refreshed on 14 January, 2024 with an overall data quality score of 99% and with a gold rating
 
-The dataset has a score of 100% for freshness which means the data set is up-to-date and refreshed on schedule [@opendatatoronto].
+The dataset has a score of 100% for freshness which means the data set is up-to-date and refreshed on schedule.
 
-The dataset has a score of 100% for metadata and completeness which means the data is well described and complete [@opendatatoronto].
-
+The dataset has a score of 100% for metadata and completeness which means the data is well described and complete. 
 The dataset has a score of 93% for Usability due to one column "Category" having constant values.
 
 # Analysis and Data Visualization
@@ -167,8 +167,6 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
   scale_color_manual(values = c("Youth" = "blue", "Child" = "red", "Adult" = "green", "Unknown" = "purple"),
                      labels = c("Youth" = "Youth", "Child" = "Child", "Adult" = "Adult", "Unknown" = "Unknown")) +  # Specify colors and labels
   theme_minimal()
-
-
 
 ```
 
