@@ -1,10 +1,10 @@
 ### Preamble ###
-# Purpose : Downloads and saves the data from OpenDataToronto
+# Purpose : Downloads and saves the data from OpenDataToronto to unedited_data.csv
 # Author : Jagpreet Singh
 # Date : 21 January 2024
 # Contact : jagpreetsingh.singh@mail.utoronto.ca
 # License : MIT
-# Pre-requisites : N/A
+# Pre-requisites : install.packages("opendatatoronto") and install.packages("dplyr") should be installed if not pre-existing
 
 ### Workspace setup ###
 
