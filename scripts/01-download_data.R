@@ -10,6 +10,7 @@
 
 library(opendatatoronto)
 library(dplyr)
+library(janitor)
 
 # get package
 package <- show_package("police-annual-statistical-report-victims-of-crime")
