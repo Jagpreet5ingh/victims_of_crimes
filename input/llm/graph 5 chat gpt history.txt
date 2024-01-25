@@ -1,0 +1,108 @@
+link to chat :https://chat.openai.com/share/f3c8c473-8c17-4762-bf99-cc2decca1e0a
+
+{r}
+#| eval: true
+#| warning: false
+#| label: fig-4
+#| fig-cap: "Total count of victims of crimes against the person of each age group per year"
+
+setwd("/cloud/project")
+# Read data
+crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
+column_specifications <- spec(crime_data)
+
+# Aggregate total counts by REPORT_YEAR and AGE_GROUP
+age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_GROUP, data = crime_data, sum)
+
+# Create a line graph using ggplot2 with age_group on the x-axis
+ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP, group = AGE_GROUP)) +
+  geom_line(linewidth = 1, alpha = 0.7) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+       x = "Year",
+       y = "Total Number of Crimes") +
+  scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("Youth" = "blue", "Child" = "red", "Adult" = "green", "Unknown" = "purple"),
+                     labels = c("Youth" = "Youth", "Child" = "Child", "Adult" = "Adult", "Unknown" = "Unknown")) +  # Specify colors and labels
+  theme_minimal()
+I want a bar graph with count_ on the y axis, report_year on the x axis and another variable age cohort which have the following options 18 to 24
+25 to 34
+35 to 44
+45 to 54
+55 to 64
+65+
+<12
+Unknown
+12 to 17
+ChatGPT
+To create a bar graph with the specified criteria, you can modify your R script as follows:
+
+r
+Copy code
+library(ggplot2)
+library(readr)
+
+# Set working directory
+setwd("/cloud/project")
+
+# Read data
+crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
+column_specifications <- spec(crime_data)
+
+# Aggregate total counts by REPORT_YEAR, AGE_COHORT, and AGE_GROUP
+age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_COHORT + AGE_GROUP, data = crime_data, sum)
+
+# Filter data to include only the specified age cohorts
+age_counts <- subset(age_counts, AGE_COHORT %in% c("18 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65+", "<12", "Unknown", "12 to 17"))
+
+# Create a bar graph using ggplot2
+ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = AGE_COHORT)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(
+    x = "Year",
+    y = "Total Number of Crimes",
+    fill = "Age Cohort"
+  ) +
+  scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
+  theme_minimal()
+This script reads the data, aggregates the total counts by REPORT_YEAR, AGE_COHORT, and AGE_GROUP, filters the data to include only the specified age cohorts, and then creates a bar graph with REPORT_YEAR on the x-axis, COUNT_ on the y-axis, and AGE_COHORT as the fill color.
+
+can i have line graph instead. also exclude: <12
+Unknown
+12 to 17
+ChatGPT
+Certainly! Here's the modified script to create a line graph excluding the specified age cohorts:
+
+r
+Copy code
+library(ggplot2)
+library(readr)
+
+# Set working directory
+setwd("/cloud/project")
+
+# Read data
+crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
+column_specifications <- spec(crime_data)
+
+# Aggregate total counts by REPORT_YEAR, AGE_COHORT, and AGE_GROUP
+age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_COHORT + AGE_GROUP, data = crime_data, sum)
+
+# Filter data to exclude specified age cohorts
+age_counts <- subset(age_counts, !(AGE_COHORT %in% c("<12", "Unknown", "12 to 17")))
+
+# Create a line graph using ggplot2
+ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_COHORT, group = AGE_COHORT)) +
+  geom_line(linewidth = 1, alpha = 0.7) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    x = "Year",
+    y = "Total Number of Crimes"
+  ) +
+  scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
+  scale_color_manual(values = c("18 to 24" = "blue", "25 to 34" = "red", "35 to 44" = "green", 
+                                 "45 to 54" = "orange", "55 to 64" = "purple", "65+" = "yellow"),
+                     labels = c("18 to 24" = "18-24", "25 to 34" = "25-34", "35 to 44" = "35-44", 
+                                "45 to 54" = "45-54", "55 to 64" = "55-64", "65+" = "65+")) +
+  theme_minimal()
+This script will create a line graph with REPORT_YEAR on the x-axis, COUNT_ on the y-axis, and each age cohort represented by a different colored line. The age cohorts "<12", "Unknown", and "12 to 17" are excluded from the graph.
