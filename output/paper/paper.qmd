@@ -49,7 +49,7 @@ As mentioned above, the dataset utilized is this paper is " Police Annual Statis
 
 -   The dataset has a score of 93% for Usability due to one column "Category" having constant values.
 
-In order to make the dataset manageable, unnecessary variables such as ID (served no purpose in our analysis) and Category (all samples had the same value, "Crimes Against the Person) were excluded.
+In order to make the dataset manageable, unnecessary variables such as ID (served no purpose in our analysis) and Category (all samples had the same value, "Crimes Against the Person) were excluded. The cleaning of data involved using the select function [@tidyverse] to select the six out of nine variables that was required for the analysis. No other change was made to the obtained dataset.
 
 ## 2.2 Variable of Interest
 
@@ -57,11 +57,11 @@ The data includes the year the victim was reported, the subtype of the crime com
 
 The victim is then identified as "Male", "Female" or "Unknown" under the sex variable. This is followed by variable age group and age cohort which are connected in the sense that ages "\<12" relates to age group "Child", ages "12-17" relates to age group "Youth" and all other ages relates to age group "Adult". Apart from these, if age group is "Unknown", age cohort is "Unknown" as well and vice versa. Finally, there is a variable to count the number of victims reported per year per subtype per sex per age group per age cohort which together makes one sample on the dataset. This variable is an important aspect of measurement as it represents the number of occurrences for each combination of all other variables hence allowing a quantitative analysis of those variables.
 
-# Analysis and Data Visualization
+# 3 Analysis and Data Visualization
 
 Our analysis examines the trends about victims of crimes against the person reported to the Toronto Police from 2014-2022, revealing insights about the nature of crime and help us understand the factors contributing to vulnerability towards such crimes.
 
-## Yearly Trends on Crime Against the Person
+## 3.1 Victims of Crimes - Yearly Trend (2014-2022)
 
 ```{r}
 #| eval: true
@@ -80,7 +80,7 @@ column_specifications <- spec(crime_data)
 total_counts <- aggregate(COUNT_ ~ REPORT_YEAR, data = crime_data, sum)  
 # Create a bar graph using ggplot2 
 ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +   
-  geom_bar(stat = "identity", fill = "blue", alpha = 0.7) + 
+  geom_bar(stat = "identity", fill = "blue", alpha = 1) + 
    geom_line(aes(group = 1), stat = "smooth", method = "lm", se = FALSE, color = "red", linetype = "solid") +  # Add trendline
   labs(      
        x = "Year",        
@@ -90,7 +90,11 @@ ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +
 
 ```
 
-## Crimes Against the Person Per Year by Type of Crime
+The yearly trends on the total number of victims of crimes against the person reported to Toronto Police every year from 2014 -- 2022 is represented with the help of the bar graph in @fig-1. On examining the bars, we see minor fluctuations from year to year with no strict patterns as such. A red regression line [^2] can be seen parallel to the x axis. The regression line is depictive of the relationship between the year and total number of victims of crime against the person. The horizontal regression line represents no correlation between the two variables. The number of victims of crimes reported yearly over the period of the data has no significant change. However, it's important to note that population change is not one of the factors taken into account for this analysis.
+
+[^2]: A regression line indicates a linear relationship between the dependent variables on the y-axis and the independent variables on the x-axis. The correlation is established by analyzing the data pattern formed by the variables [@line].
+
+## 3.2 Assaults and Sexual Violations on a Rise
 
 ```{r}
 #| eval: true
@@ -108,7 +112,7 @@ subtype_counts <- aggregate(COUNT_ ~ REPORT_YEAR + SUBTYPE, data = crime_data, s
 
 # Create a bar graph using ggplot2 with subtype on the bars
 ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYPE)) +
-  geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 1.5) +
   labs(
        x = "Year",
        y = "Total victims") +
@@ -117,7 +121,9 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
 
 ```
 
-## Distribution of Crimes Against the Person by Gender
+When analysing the total number of victims every year from 2014-2022 with respect to the subtype of the crime, it is evident from @fig-2 that there has been an overall increase in the number of victims of assault. Additionally, it can be noticed that the number of victims of sexual assault is also following an upward trend. Both assault and sexual assault crime victims peaked in 2022 with 18995 and 2873 reported victims respectively. On the other hand, a declining trend can be observed in the number of victims of robbery and other types of CCSJ level 1 crime. The rise in cases of assault and sexual assault is a rather concerning trend as these crimes usually consist of bodily harm or threats of harm to the victims.
+
+## 3.3 Females - The More Vulnerable Sex to be a Victim of Crime in the recent times
 
 ```{r}
 #| eval: true
@@ -147,7 +153,9 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
 
 ```
 
-## Distribution of Crimes Against the Person by Age Group
+@fig-3 represents a very interesting pattern when observed on a year-to-year basis. Beginning from 2014, individuals of both sex, male and female became victims of crime with 172 more cases of female victims reported. However, from 2015 -- 2019, number of male victims increased at a higher rate than females. In 2020, both sexes became victims to almost the same number of crimes. 2020 onwards, the number of female victims increased at a higher rate than males showing a complete opposite trend when compared to 2015-2019. However, this trend is synonymous to the pattern seen in @fig-2. The cases of sexual violation showed an increasing trend in the same period the crime against women increased.
+
+## 3.4 Adults - Most Vulnerable Age Group to be a Victim of Crime
 
 ```{r}
 #| eval: true
@@ -214,5 +222,9 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_COHOR
 
 
 ```
+
+Age is another variable that can help us understand the vulnerability towards crimes on an increasing trend such as assault and sexual violence, as established from @fig-2. When examining the total number of victims every year from 2014-2022 with respect to the age group of the victim in @fig-4, it is clear that the adult age group is the most prone to crimes against them. The dataset defines adult as anyone who is older than 17 years of age. It is therefore necessary to drill down into which specific age cohort of adults is most vulnerable to crimes. @fig-5 does exactly that by graphing the total number of victims over the years with respect to the adult age cohort. The graph reveals that the most vulnerable victims are adults that are 25-34 years of age represented by the red line.
+
+# **CONCLUSION**
 
 # Refrences
