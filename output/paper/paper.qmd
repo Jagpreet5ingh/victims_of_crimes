@@ -121,7 +121,7 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
 
 ```
 
-When analysing the total number of victims every year from 2014-2022 with respect to the subtype of the crime, it is evident from @fig-2 that there has been an overall increase in the number of victims of assault. Additionally, it can be noticed that the number of victims of sexual assault is also following an upward trend. Both assault and sexual assault crime victims peaked in 2022 with 18995 and 2873 reported victims respectively. On the other hand, a declining trend can be observed in the number of victims of robbery and other types of CCSJ level 1 crime. The rise in cases of assault and sexual assault is a rather concerning trend as these crimes usually consist of bodily harm or threats of harm to the victims.
+When analyzing the total number of victims every year from 2014-2022 with respect to the sub type of the crime, it is evident from @fig-2 that there has been an overall increase in the number of victims of assault. Additionally, it can be noticed that the number of victims of sexual assault is also following an upward trend. Both assault and sexual assault crime victims peaked in 2022 with 18995 and 2873 reported victims respectively. On the other hand, a declining trend can be observed in the number of victims of robbery and other types of CCSJ level 1 crime. The rise in cases of assault and sexual assault is a rather concerning trend as these crimes usually consist of bodily harm or threats of harm to the victims.
 
 ## 3.3 Females - The More Vulnerable Sex to be a Victim of Crime in the recent times
 
@@ -153,7 +153,7 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
 
 ```
 
-@fig-3 represents a very interesting pattern when observed on a year-to-year basis. Beginning from 2014, individuals of both sex, male and female became victims of crime with 172 more cases of female victims reported. However, from 2015 -- 2019, number of male victims increased at a higher rate than females. In 2020, both sexes became victims to almost the same number of crimes. 2020 onwards, the number of female victims increased at a higher rate than males showing a complete opposite trend when compared to 2015-2019. However, this trend is synonymous to the pattern seen in @fig-2. The cases of sexual violation showed an increasing trend in the same period the crime against women increased.
+@fig-3 represents a very interesting pattern when observed on a year-to-year basis. Beginning from 2014, individuals of both sex, male and female became victims of crime with 172 more cases of female victims reported. However, from 2015 -- 2019, number of male victims increased at a higher rate than females. In 2020, both sexes became victims to almost the same number of crimes. 2020 onward, the number of female victims increased at a higher rate than males showing a complete opposite trend when compared to 2015-2019. However, this trend is synonymous to the pattern seen in @fig-2. The cases of sexual violation showed an increasing trend in the same period the crime against women increased.
 
 ## 3.4 Adults - Most Vulnerable Age Group to be a Victim of Crime
 
@@ -227,4 +227,6 @@ Age is another variable that can help us understand the vulnerability towards cr
 
 # **CONCLUSION**
 
-# Refrences
+The analysis of Toronto\'s victims of crime yearly trends and the shifts in the types of crimes committed in the recent years in conjunction with factors like sex, age group and age cohort help us better understand vulnerability of individuals towards these crimes. As per our study, a vulnerable individual is more likely to become a victim of assault than any other type of CCSJ level 1 crime. Sexual violence is also on the rise in the recent times. An increasing trend in both types of crimes can be observed in \@fig2. Additionally, our study shoes that individuals vulnerable towards these crimes are likely adults that are 25-34 years of age. In the more recent times, as evident from \@fig-3, Graph of total number of victims per year by sex (2014-2022), females are at a higher risk than males. Hence, we can conclude that the most vulnerable group of individuals that can be a victim of assault or sexual violence are female adults that are 25-34 years of age. These results stresses upon the importance of taking measures to improve public safety as well as woman safety in the city of Toronto. As the city continues to welcome more individuals every year, a analytical approach to study the trends and utilizing the results when making policy decisions can set us towards the right track.
+
+# References
