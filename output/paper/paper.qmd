@@ -27,7 +27,7 @@ These findings are crucial to guide the development of efficient policy and law 
 
 Code and data supporting this analysis is available.[^1]
 
-[^1]: https://github.com/Jagpreet5ingh \# Data
+[^1]: https://github.com/Jagpreet5ingh/victims_of_crimes
 
 # 2 Data
 
