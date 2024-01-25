@@ -8,7 +8,7 @@ execute:
   echo: false
 format: pdf
 fig-pos: "H"
-abstract: This study analyzes the trends of crimes against the person reported to the Toronto Police from 2014-2022.The data was obtained from OpenDataToronto. On a first look, the data does not show a drastic increase or decrease in the number of crimes against the person reported each year to Toronto Police. However, on taking a deep dive into the data we find underlying trends that are shaping over the years. There has been some shifts in the type of crimes being reported and the victims of the crime. This research is crucial as it provides insights into Toronto's crime data and help inform the vulnerables.
+abstract: This study focuses on analyzing the trends in the dataset of all identified victims of crimes against the person reported to the Toronto Police. The dataset, obtained from OpenDataToronto, includes data from 2014 – 2022. When studied on a year-to-year basis, the data show minor fluctuations in the number of crimes committed against individuals. However, when analyzed over the period from 2014-2022, there appears to be no significant shift in the number of crimes committed against individuals annually. Nonetheless, upon delving deeper into the data, we uncover changes in the underlying trends on crimes against the person. This research is significant as it provides insights into the factors that can make an individual vulnerable to such crimes.
 ---
 
 ```{r}
@@ -17,28 +17,35 @@ knitr::opts_chunk$set(echo = FALSE, results ="hide", message = FALSE, warning = 
 
 # Introduction
 
-In this paper, we use R [@citeR] to analyze the data from opendatatoronto[@opendatatoronto] on crime against the person reported to the Toronto Police.
+Canada, often listed as one of the safest countries in the world attracts hundreds of thousands of immigrants every year in search of a better lifestyle. A huge chunk of these immigrants resides in major Canadian cities like Toronto, Vancouver, Montreal, or Calgary making them some of the most populous cities in Canada. Crimes against the person is a pressing issue in majority of the big cities worldwide and the City of Toronto is no exception. In the scope of this paper, "crimes" specifically refers to "crimes against the person". The study of crimes against the person is critical in ensuring public safety and creating an informed society. This paper presents an analysis of the victims of crimes against the person reported to the Toronto Police from 2014 -- 2022.  The analysis is driven by the need to develop an understanding of the factors that makes one more vulnerable to such crimes and examine the underlying trends in the type of crimes committed against the person over this period of nine years.
+
+The dataset for this study was obtained from OpenDataToronto [@opendatatoronto], specifically the "Police Annual Statistical Report - Victims of Crimes" published by the Toronto Police Services. The dataset includes all identified victims of crimes against the person reported to the Toronto Police and the type of crime that was committed along with the sex and age group information of the victim. Here, "crimes against the person" is referring to CCJS level 1 only @victimsofcrimes. As per statistics Canada, examples of CCJS level 1 crimes are assault, sexual assault etc. @statscanada. Our research offers an examination of the trends in the number of reported victims of crimes each year over the span of nine years from 2014-2022, the type of crimes committed (assault, sexual assault, robbery or other) against them and factors that make them vulnerable to these crimes. The examination was executed using the R programming language [@citeR] and enhanced with diverse analytical tools, including Tidyverse [@tidyverse], Janitor [@janitor], and Knitr [@knitr].
+
+The results of this research revealed some interesting trends. On examination, the number of victims reported over the study period revealed no noteworthy increase or decrease in the number of reported victims. Upon delving deeper, we found that although the number of reported victims of crimes remained almost constant the underlying trends such as the nature of the crime and the profile of the potential victim has changed over the years. Where, victims of robbery and other crimes shows a descending pattern, an increase in women victims and victims of assault and sexual assault calls for actions by the authority to ensure women and public safety. Among the victims, adults (18+) constitute the majority, followed by youths (12-17 years of age).
+
+These findings are crucial to guide the development of efficient policy and law enforcement strategies. The paper is organized as follows: Section 2 details the techniques used to process the data followed by a brief discussion of the dataset and variable of interests. Section 3 presents the findings of the paper including yearly trends on victims of crimes followed by addition of factors such as age and sex. The concluding section brings together these insights and help us better understand the vulnerability of individuals towards these crimes along with the broader societal understanding of crimes in Toronto.
 
 Code and data supporting this analysis is available.[^1]
 
 [^1]: https://github.com/Jagpreet5ingh \# Data
 
-# Data
+# 2 Data
 
+The data being used in this paper was obtained from City of Toronto's Open data portal using the opendatatoronto package \[\@opendatatoronto\]. The dataset used in the analysis is " Police Annual Statistical Report - Victims of Crimes" published by the Toronto Police Services.
 
-The dataset being used in this paper was obtained from City of Toronto's Open data portal using the opendatatoronto package [@opendatatoronto].
+The data was cleaned and analyzed using the R programming language \[\@citeR\] and the following packages were used: Tidyverse  \[\@tidyverse\], Janitor \[\@janitor\], and Knitr \[\@knitr\].
 
-This dataset includes all identified victims of crimes against the person, including, but not limited to, those that may have been deemed unfounded after investigation, those that may have occurred outside the City of Toronto limits, or have no verified location. 
+Details of the data extraction and cleaning processes are discussed in the subsections below.
 
-The data has been aggregated by reported year, geographic police division, offence subtype, sex, and age group.
+## 2.1 Dataset
 
 ## Limitations
 
--   Age calculated from date of occurrence 
+-   Age calculated from date of occurrence
 
--   Filtered by reported year 
+-   Filtered by reported year
 
--   Victims only for CCJS Level 1 = 'Crimes Against the Person' and where the victim name is not null 
+-   Victims only for CCJS Level 1 = 'Crimes Against the Person' and where the victim name is not null
 
 ## **Data Quality**
 
@@ -46,21 +53,17 @@ As of 23 January, 2024, the dataset was last refreshed on 14 January, 2024 with 
 
 The dataset has a score of 100% for freshness which means the data set is up-to-date and refreshed on schedule.
 
-The dataset has a score of 100% for metadata and completeness which means the data is well described and complete. 
-The dataset has a score of 93% for Usability due to one column "Category" having constant values.
+The dataset has a score of 100% for metadata and completeness which means the data is well described and complete. The dataset has a score of 93% for Usability due to one column "Category" having constant values.
 
 # Analysis and Data Visualization
 
-
-
 ## Yearly Trends on Crime Against the Person
-
 
 ```{r}
 #| eval: true
 #| warning: false
 #| label: fig-1
-#| fig-cap: "Total count of crimes against the person per year (2014-2022)"
+#| fig-cap: "Total count of victims of crimes against the person per year (2014-2022)"
 
 
 setwd("/cloud/project")
@@ -89,7 +92,7 @@ ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +
 #| eval: true
 #| warning: false
 #| label: fig-2
-#| fig-cap: "Total count of crimes against the person per year by type of crime (2014-2022)"
+#| fig-cap: "Total count of victims of crimes against the person per year by type of crime (2014-2022)"
 
 setwd("/cloud/project")
 # Read data
@@ -116,7 +119,7 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
 #| eval: true
 #| warning: false
 #| label: fig-3
-#| fig-cap: "Total count of crimes against the person of each sex per year"
+#| fig-cap: "Total count of victims of crimes against the person of each sex per year"
 
 setwd("/cloud/project")
 # Read data
@@ -146,7 +149,7 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
 #| eval: true
 #| warning: false
 #| label: fig-4
-#| fig-cap: "Total count of crimes against the person of each age group per year"
+#| fig-cap: "Total count of victims of crimes against the person of each age group per year"
 
 setwd("/cloud/project")
 # Read data
@@ -169,6 +172,5 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
   theme_minimal()
 
 ```
-
 
 # Refrences
