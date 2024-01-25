@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE, results ="hide", message = FALSE, warning = 
 
 Canada, often listed as one of the safest countries in the world attracts hundreds of thousands of immigrants every year in search of a better lifestyle. A huge chunk of these immigrants resides in major Canadian cities like Toronto, Vancouver, Montreal, or Calgary making them some of the most populous cities in Canada. Crimes against the person is a pressing issue in majority of the big cities worldwide and the City of Toronto is no exception. In the scope of this paper, "crimes" specifically refers to "crimes against the person". The study of crimes against the person is critical in ensuring public safety and creating an informed society. This paper presents an analysis of the victims of crimes against the person reported to the Toronto Police from 2014 -- 2022.  The analysis is driven by the need to develop an understanding of the factors that makes one more vulnerable to such crimes and examine the underlying trends in the type of crimes committed against the person over this period of nine years.
 
-The dataset for this study was obtained from OpenDataToronto [@opendatatoronto], specifically the "Police Annual Statistical Report - Victims of Crimes" published by the Toronto Police Services. The dataset includes all identified victims of crimes against the person reported to the Toronto Police and the type of crime that was committed along with the sex and age group information of the victim. Here, "crimes against the person" is referring to CCJS level 1 only @victimsofcrimes. As per statistics Canada, examples of CCJS level 1 crimes are assault, sexual assault etc. @statscanada. Our research offers an examination of the trends in the number of reported victims of crimes each year over the span of nine years from 2014-2022, the type of crimes committed (assault, sexual assault, robbery or other) against them and factors that make them vulnerable to these crimes. The examination was executed using the R programming language [@citeR] and enhanced with diverse analytical tools, including Tidyverse [@tidyverse], Janitor [@janitor], and Knitr [@knitr].
+The dataset for this study was obtained from OpenDataToronto [@opendatatoronto], specifically the "Police Annual Statistical Report - Victims of Crimes" published by the Toronto Police Services. The dataset includes all identified victims of crimes against the person reported to the Toronto Police and the type of crime that was committed along with the sex and age group information of the victim. Here, "crimes against the person" is referring to CCJS level 1 only [@victimsofcrimes]. As per statistics Canada, examples of CCJS level 1 crimes are assault, sexual assault etc. @statscanada. Our research offers an examination of the trends in the number of reported victims of crimes each year over the span of nine years from 2014-2022, the type of crimes committed (assault, sexual assault, robbery or other) against them and factors that make them vulnerable to these crimes. The examination was executed using the R programming language [@citeR] and enhanced with diverse analytical tools, including Tidyverse [@tidyverse], Janitor [@janitor], and Knitr [@knitr].
 
 The results of this research revealed some interesting trends. On examination, the number of victims reported over the study period revealed no noteworthy increase or decrease in the number of reported victims. Upon delving deeper, we found that although the number of reported victims of crimes remained almost constant the underlying trends such as the nature of the crime and the profile of the potential victim has changed over the years. Where, victims of robbery and other crimes shows a descending pattern, an increase in women victims and victims of assault and sexual assault calls for actions by the authority to ensure women and public safety. Among the victims, adults (18+) constitute the majority, followed by youths (12-17 years of age).
 
@@ -39,21 +39,23 @@ Details of the data extraction and cleaning processes are discussed in the subse
 
 ## 2.1 Dataset
 
-## Limitations
+As mentioned above, the dataset utilized is this paper is " Police Annual Statistical Report - Victims of Crimes" published by the Toronto Police Services. The dataset includes all identified victims of crimes against the person, including, but not limited to, those that may have been deemed unfounded after investigation, those that may have occurred outside the City of Toronto limits, or have no verified location. The dataset includes data from 2014-2022 with 1110 samples each with 9 variables. Some samples in variables such as "Sex" and "Age Group" have unknown values. But the number of such samples is relatively and consistently small for each year and hence doesn't create a huge deviation in the data. Another potential concern is the number of unidentified or unreported victims of these crimes. However, since the data is only considering the CCSJ level 1 crimes, it limits the number of unreported CCSJ level 1 crimes to a small number. As per statistics Canada, examples of CCSJ level 1 crimes are assault, sexual assault etc. @statscanada. Moreover, crimes like assault, sexual assault, and robbery usually do not go unreported. Finally, the variable "Subtype" has "other" as one of the options which does not provide enough insight into what the other subtypes of crime are apart from assault, sexual assault, and robbery, thereby limiting the connection that can be drawn between different variables. No other datasets were considered because this data is directly published by Toronto Police Services, the original owner of the data. Additionally, the dataset was rated highly in data quality as below [@victimsofcrimes]:
 
--   Age calculated from date of occurrence
+-   As of 23 January, 2024, the dataset was last refreshed on 14 January, 2024 with an overall data quality score of 99% and with a gold rating.
 
--   Filtered by reported year
+-   The dataset has a score of 100% for freshness which means the data set is up-to-date and refreshed on schedule.
 
--   Victims only for CCJS Level 1 = 'Crimes Against the Person' and where the victim name is not null
+-    The dataset has a score of 100% for metadata and completeness which means the data is well described and complete.
 
-## **Data Quality**
+-   The dataset has a score of 93% for Usability due to one column "Category" having constant values.
 
-As of 23 January, 2024, the dataset was last refreshed on 14 January, 2024 with an overall data quality score of 99% and with a gold rating
+In order to make the dataset manageable, unnecessary variables such as ID (served no purpose in our analysis) and Category (all samples had the same value, "Crimes Against the Person) were excluded.
 
-The dataset has a score of 100% for freshness which means the data set is up-to-date and refreshed on schedule.
+## 2.2 Variable of Interest
 
-The dataset has a score of 100% for metadata and completeness which means the data is well described and complete. The dataset has a score of 93% for Usability due to one column "Category" having constant values.
+The data includes the year the victim was reported, the subtype of the crime committed against the victim which was broken into four sub-categories "assault", "sexual assault", "robbery" and "other".
+
+The victim is then identified as "Male", "Female" or "Unknown" under the sex variable. This is followed by variable age group and age cohort which are connected in the sense that ages "\<12" relates to age group "Child", ages "12-17" relates to age group "Youth" and all other ages relates to age group "Adult". Apart from these, if age group is "Unknown", age cohort is "Unknown" as well and vice versa. Finally, there is a variable to count the number of victims reported per year per subtype per sex per age group per age cohort which together makes one sample on the dataset. This variable is an important aspect of measurement as it represents the number of occurrences for each combination of all other variables hence allowing a quantitative analysis of those variables.
 
 # Analysis and Data Visualization
 
@@ -63,7 +65,7 @@ The dataset has a score of 100% for metadata and completeness which means the da
 #| eval: true
 #| warning: false
 #| label: fig-1
-#| fig-cap: "Total count of victims of crimes against the person per year (2014-2022)"
+#| fig-cap: "Graph of total number of victims per year (2014-2022)"
 
 
 setwd("/cloud/project")
@@ -92,7 +94,7 @@ ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +
 #| eval: true
 #| warning: false
 #| label: fig-2
-#| fig-cap: "Total count of victims of crimes against the person per year by type of crime (2014-2022)"
+#| fig-cap: "Graph of total number of victims per year by type of crime (2014-2022)"
 
 setwd("/cloud/project")
 # Read data
@@ -119,7 +121,7 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
 #| eval: true
 #| warning: false
 #| label: fig-3
-#| fig-cap: "Total count of victims of crimes against the person of each sex per year"
+#| fig-cap: "Graph of total number of victims per year by sex"
 
 setwd("/cloud/project")
 # Read data
@@ -149,7 +151,7 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
 #| eval: true
 #| warning: false
 #| label: fig-4
-#| fig-cap: "Total count of victims of crimes against the person of each age group per year"
+#| fig-cap: "Graph of total number of victims per year by age group"
 
 setwd("/cloud/project")
 # Read data
@@ -170,6 +172,44 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
   scale_color_manual(values = c("Youth" = "blue", "Child" = "red", "Adult" = "green", "Unknown" = "purple"),
                      labels = c("Youth" = "Youth", "Child" = "Child", "Adult" = "Adult", "Unknown" = "Unknown")) +  # Specify colors and labels
   theme_minimal()
+
+```
+
+```{r}
+#| eval: true
+#| warning: false
+#| label: fig-5
+#| fig-cap: "Graph of total number of adult victims per year by age cohort"
+
+setwd("/cloud/project")
+
+# Read data
+crime_data <- read_csv("output/data/edited_data.csv", show_col_types = FALSE) 
+column_specifications <- spec(crime_data)
+
+# Define the order of age cohorts
+age_order <- c("18 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65+")
+
+# Filter out unwanted age cohorts
+filtered_data <- subset(crime_data, !(AGE_COHORT %in% c("<12", "Unknown", "12 to 17")))
+
+# Aggregate total counts by REPORT_YEAR, AGE_COHORT, and sum
+age_counts <- aggregate(COUNT_ ~ REPORT_YEAR + AGE_COHORT, data = filtered_data, sum)
+
+# Create a line graph using ggplot2 with age cohort on the x-axis
+ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_COHORT, group = AGE_COHORT)) +
+  geom_line(linewidth = 1, alpha = 0.7) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    x = "Year",
+    y = "Total Number of Crimes"
+  ) +
+  scale_color_manual(values = c(
+    "18 to 24" = "blue", "25 to 34" = "red", "35 to 44" = "green", 
+    "45 to 54" = "purple", "55 to 64" = "orange", "65+" = "pink"
+  )) +  # Specify colors
+  theme_minimal()
+
 
 ```
 
