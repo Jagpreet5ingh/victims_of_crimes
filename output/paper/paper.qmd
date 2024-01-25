@@ -59,6 +59,8 @@ The victim is then identified as "Male", "Female" or "Unknown" under the sex var
 
 # Analysis and Data Visualization
 
+Our analysis examines the trends about victims of crimes against the person reported to the Toronto Police from 2014-2022, revealing insights about the nature of crime and help us understand the factors contributing to vulnerability towards such crimes.
+
 ## Yearly Trends on Crime Against the Person
 
 ```{r}
@@ -82,7 +84,7 @@ ggplot(total_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_)) +
    geom_line(aes(group = 1), stat = "smooth", method = "lm", se = FALSE, color = "red", linetype = "solid") +  # Add trendline
   labs(      
        x = "Year",        
-       y = "Total Number of Crimes") +  
+       y = "Total victims") +  
   scale_y_continuous(breaks = seq(0, max(total_counts$COUNT_), by = 2000)) + # Set y-axis breaks
   theme_minimal()
 
@@ -109,7 +111,7 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
   geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
   labs(
        x = "Year",
-       y = "Total Number of Crimes") +
+       y = "Total victims") +
   scale_y_continuous(breaks = seq(0, max(subtype_counts$COUNT_), by = 2000)) +
   theme_minimal()
 
@@ -121,7 +123,7 @@ ggplot(subtype_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, fill = SUBTYP
 #| eval: true
 #| warning: false
 #| label: fig-3
-#| fig-cap: "Graph of total number of victims per year by sex"
+#| fig-cap: "Graph of total number of victims per year by sex (2014-2022)"
 
 setwd("/cloud/project")
 # Read data
@@ -136,7 +138,7 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
   geom_point(size = 3, alpha = 0.7) +
   labs(
        x = "Year",
-       y = "Total Number of Crimes") +
+       y = "Total victims") +
   scale_y_continuous(breaks = seq(0, max(sex_counts$COUNT_), by = 2000)) +
   scale_color_manual(values = c("F" = "blue", "M" = "red", "U" = "brown"),
                      labels = c("F" = "Female", "M" = "Male", "U" = "Unknown")) +  # Specify colors and labels
@@ -151,7 +153,7 @@ ggplot(sex_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = SEX)) +
 #| eval: true
 #| warning: false
 #| label: fig-4
-#| fig-cap: "Graph of total number of victims per year by age group"
+#| fig-cap: "Graph of total number of victims per year by age group (2014-2022)"
 
 setwd("/cloud/project")
 # Read data
@@ -167,7 +169,7 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
   geom_point(size = 3, alpha = 0.7) +
   labs(
        x = "Year",
-       y = "Total Number of Crimes") +
+       y = "Total victims") +
   scale_y_continuous(breaks = seq(0, max(age_counts$COUNT_), by = 2000)) +
   scale_color_manual(values = c("Youth" = "blue", "Child" = "red", "Adult" = "green", "Unknown" = "purple"),
                      labels = c("Youth" = "Youth", "Child" = "Child", "Adult" = "Adult", "Unknown" = "Unknown")) +  # Specify colors and labels
@@ -179,7 +181,7 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_GROUP
 #| eval: true
 #| warning: false
 #| label: fig-5
-#| fig-cap: "Graph of total number of adult victims per year by age cohort"
+#| fig-cap: "Graph of total number of adult victims per year by age cohort (2014-2022)"
 
 setwd("/cloud/project")
 
@@ -202,7 +204,7 @@ ggplot(age_counts, aes(x = as.factor(REPORT_YEAR), y = COUNT_, color = AGE_COHOR
   geom_point(size = 3, alpha = 0.7) +
   labs(
     x = "Year",
-    y = "Total Number of Crimes"
+    y = "Total victims"
   ) +
   scale_color_manual(values = c(
     "18 to 24" = "blue", "25 to 34" = "red", "35 to 44" = "green", 
