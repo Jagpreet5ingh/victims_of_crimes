@@ -18,4 +18,4 @@ The repo is structured as:
 
 -   **scripts** contains the R scripts used to simulate, download and clean data.
 
-***Statement on LLM usage:** Aspects of the code were written with the help of AI powered large language model, ChatGPT. The script 00-simulate_data.R and codes for graphs and tables in paper.qmd were written with the help of ChatGPT and the entire chat history is available in the .txt files saved in **input/llm***
+***Statement on LLM usage:** Aspects of the code were written with the help of AI powered large language model, ChatGPT. The script 00-simulate_data.R and codes for graphs in paper.qmd were written with the help of ChatGPT and the entire chat history is available in the .txt files saved in **input/llm***
